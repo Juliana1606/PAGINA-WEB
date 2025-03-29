@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- JS de Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="styles_Main.css">
+    <script src="script.js" defer></script>
+    
+    <title>Tours Aerosport</title>
+</head>
+<body>
+
+    <header class="head">
+        <img class="LOGO-AEROSPOR" src="Sin_fondo.png" alt="Logo Aerospor">
+        <nav class="nav">
+            <div class="Texto-Menu">INICIO</div>
+            <div class="Texto-Menu">VUELOS RECREATIVOS</div>
+            <div class="Texto-Menu">AERONAVES</div>
+            <div class="Texto-Menu">¿QUIENES SOMOS?</div>
+            <div class="Texto-Menu">ESCUELA</div>
+            <div class="Texto-Menu">EVENTOS</div>
+        </nav>
+        <div class="boton-contactanos">
+            <span class="Texto-contacto">CONTACTANOS</span>
+        </div>
+    </header>
+
+    <main class="contenido">
+        <div class="frame-principal">
+            <div id="carouselvideos" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselvideos" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselvideos" data-slide-to="1"></li>
+                    <li data-target="#carouselvideos" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video class="d-block w-100">
+                            <source src="Carusel_videos/VOLANDO RECORTADO.mp4" type="video/mp4">
+                        </video>
+                        <p class="sr-only">Experimenta la emoción de volar sobre Melgar</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="d-block w-100" autoplay muted loop playsinline>
+                            <source src="video2.mp4" type="video/mp4">
+                        </video>
+                        <p class="sr-only">Disfruta de una vista impresionante desde las alturas</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="d-block w-100" autoplay muted loop playsinline>
+                            <source src="video3.mp4" type="video/mp4">
+                        </video>
+                        <p class="sr-only">Vuela sobre paisajes inolvidables con nosotros</p>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselvideos" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselvideos" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <div class="group">
+                    <p class="text-wrapper">VIVE LA EXPERIENCIA DE VOLAR</p>
+                    <button class="boton-reserva">RESERVA AHORA</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sobrenosotros">
+            <div id="conocenos" class="about">
+                <div class="about-content">
+                    <h2>CONÓCENOS</h2>
+                    <p>Hola, introducción corta sobre la empresa y nuestras experiencias aéreas.</p>
+                </div>
+
+                <div id="carouselConocenos" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselConocenos" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselConocenos" data-slide-to="1"></li>
+                        <li data-target="#carouselConocenos" data-slide-to="2"></li>
+                        <li data-target="#carouselConocenos" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="Img_Avion/Avion3.jpg" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Img_Avion/Avion4.jpg" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Img_Avion/Avion5.jpg" alt="Imagen 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Img_Avion/Avion6.jpg" alt="Imagen 4">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselConocenos" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselConocenos" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dondeestamos">
+            <div id="ubicacion" class="location">
+                <div class="info">
+                    <h2>UBICACIÓN</h2>
+                    <p><strong>¿Cómo llegar?</strong></p>
+                    <p>Estamos ubicados en un punto estratégico para ofrecerte la mejor experiencia aérea.</p>
+                </div>
+                <div id="carouselUbicacion" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselUbicacion" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselUbicacion" data-slide-to="1"></li>
+                        <li data-target="#carouselUbicacion" data-slide-to="2"></li>
+                        <li data-target="#carouselUbicacion" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <video class="d-block w-100">
+                                <source src="Carusel_videos/Usuario_volar.mp4" type="video/mp4">
+                            </video>
+                            <p class="sr-only">Un usuario apunto de volar</p>
+                        </div>
+                        <div class="carousel-item">
+                            <video class="d-block w-100">
+                                <source src="Carusel_videos/VOLANDO RECORTADO.mp4" type="video/mp4">
+                            </video>
+                            <p class="sr-only">Experimenta la emoción de volar sobre Melgar</p>
+                        </div>
+                        <div class="carousel-item">
+                            <video class="d-block w-100">
+                                <source src="Carusel_videos/VOLANDO RECORTADO.mp4" type="video/mp4">
+                            </video>
+                            <p class="sr-only">Experimenta la emoción de volar sobre Melgar</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Img_Lugar/Lugar5.jpg" alt="Imagen 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Img_Lugar/Lugar6.jpg" alt="Imagen 4">
+                        </div>
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselUbicacion" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselUbicacion" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+             <div class="Guia">
+                <button class="boton-reserva">
+                    <i class="fab fa-whatsapp"></i> ¿Dudas? Nosotros te guiamos
+                </button>
+             </div>
+             <div id="map" ></div>
+                    
+                
+            </div>
+        </div>
+
+        <div class="MasExperiencias">
+
+            <div id="carouselExperiencias" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExperiencias" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExperiencias" data-slide-to="1"></li>
+                    <li data-target="#carouselExperiencias" data-slide-to="2"></li>
+                    <li data-target="#carouselExperiencias" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="Img_Lugar/Lugar2.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="Img_Lugar/Lugar3.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="Img_Lugar/Lugar4.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="Img_Lugar/Lugar5.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="Img_Lugar/Lugar6.jpg" alt="Imagen 4">
+                    </div>
+                    
+                </div>
+                <a class="carousel-control-prev" href="#carouselExperiencias" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExperiencias" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

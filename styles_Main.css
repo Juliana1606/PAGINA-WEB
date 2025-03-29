@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    padding: 20px 50px;
+    background-color: #001dff;
+    font-family: 'Jockey One', sans-serif;
+    width: 100%;
+    height: 80px;
+}
+
+.head .LOGO-AEROSPOR {
+    width: 150px; 
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 50px; /* Espaciado entre los elementos */
+    flex-grow: 1; /* Permite que ocupe el espacio central */
+    justify-content: center; /* Centra los elementos en el header */
+}
+
+.nav .Texto-Menu {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-contactanos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    border-radius: 37px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.boton-contactanos .text-wrapper-6 {
+    font-size: 22px;
+    color: #000000;
+}
+.nav .text-wrapper {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Necesario para el pseudo-elemento */
+    padding-bottom: 20px; /* Espacio entre el texto y la línea */
+}
+
+.nav .text-wrapper::after {
+    content: ""; /* Crea el pseudo-elemento */
+    width: 0%; /* Inicia sin ancho */
+    height: 3px; /* Grosor de la línea */
+    background-color: #ffffff; /* Color de la línea */
+    bottom: 0; /* Se ubica debajo del texto */
+    left: 50%; /* Centra la línea */
+    transform: translateX(-50%); /* Ajuste para centrar */
+    transition: width 0.3s ease-in-out; /* Animación suave */
+}
+
+.nav .text-wrapper:hover::after {
+    width: 100%; /* Expande la línea al 100% del texto */
+}
+main {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center; /* Centra el contenido */
+    
+}
+/* Estilos generales */
+.frame-principal {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor del carrusel */
+#carouselvideos {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+/* Slides de video */
+.video-slide {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#carouselvideos .carousel-indicators {
+    
+    bottom: 60px; /* Ajusta la posición */
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+.carousel-indicators li {
+    background-color: #0026ff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+    margin: 5px; /* Espaciado entre indicadores */
+    
+}
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #ffffff;
+}
+
+
+/* Contenedor del texto y botón */
+.group {
+    position: absolute;
+    align-items: flex-start;
+    width: 700px;
+    height: 200px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Texto */
+.text-wrapper {
+    font-family: "Jockey One", sans-serif;
+    font-size: 80px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Botón estilizado */
+.boton-reserva {
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    background-color: #e92424;
+    border: none;
+    border-radius: 44px;
+    font-family: "Jockey One", sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.boton-reserva:hover {
+    background-color: #c51e1e;
+    transform: scale(1.05);
+}
+
+/* Accesibilidad (oculta texto visualmente pero lo mantiene para lectores de pantalla) */
+.sr-only {
+    
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Contenedor general */
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* Sección Conócenos */
+#conocenos {
+    width: 100%;
+    height: 60vh;
+    display:flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    
+    padding: 40px 0; /* Espaciado para mejor visualización */
+}
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:#bbb;
+    padding: 40px;
+    align-items: center;
+}
+
+.about-content {
+    
+    width: 45%;
+    height: 20%;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.about h2 {
+    
+    font-family: 'Jockey One', bold;
+    color: #0026ff;
+}
+
+.about p {
+    font-family: 'Jockey One', sans-serif;
+    font-size: 18px;
+}
+/* Ajuste para el carrusel en el lado izquierdo */
+#carouselConocenos {
+    width: 30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Carrusel de imágenes */
+.carousel {
+    width: 45%;
+    overflow: hidden;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.carousel-images {
+    align-items: center;
+    width: 20%;
+    height: 20%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Flechas de navegación */
+.prev, .next {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Indicadores circulares */
+
+.dot {
+    width: 12px;
+    height: 20px;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #0026ff;
+}
+
+
+/* Indicadores del carrusel */
+/* Ajusta la posición de los indicadores */
+.carousel-indicators {
+    position: absolute;
+    bottom: -25px; /* Separa los indicadores de la imagen */
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+.carousel-indicators li {
+    background-color: #0026ff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+    margin: 5px; /* Espaciado entre indicadores */
+    
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #carouselConocenos, .about-content {
+        width: 100%;
+    }
+}
+.dondeestamos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    width: 100%;
+    height: 30vh;
+    background-color:#ffffff; /* Gris claro */
+}
+#ubicacion{
+
+    width: 100%;
+    height: 60vh;
+    display:flex;
+    justify-items: center;    
+    padding: 40px; /* Espaciado para mejor visualización */
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+
+}
+
+.location h2 {
+    
+    font-family: 'Jockey One', bold;
+    color: #0026ff;
+}
+.Guia{
+    display: flex;
+
+    padding: 30px;
+}
+/*Estilos seccion ubicacion*/
+.dondeestamos .boton-reserva {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 400px;
+    height: 60px;
+    background-color: #ffd900;
+    border: none;
+    border-radius: 0px;
+    font-family: "Jockey One", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    justify-content: space-around;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    
+}
+
+.dondeestamos .boton-reserva:hover {
+    background-color: #ffee53;
+    transform: scale(1.05);
+}
+.boton-reserva i {
+    margin-top: 8px; /* Espacio entre el ícono y el texto */
+    font-size: 40px; /* Ajusta el tamaño del ícono */
+    margin: auto;
+}
+#carouselUbicacion {
+    width: 40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#carouselUbicacion .carousel-indicators {
+    position: absolute;
+    bottom: 5px; /* Ajusta la posición */
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+.carousel-indicators li {
+    background-color: #0026ff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+    margin: 5px; /* Espaciado entre indicadores */
+    
+}
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #ffffff;
+}
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #carouselUbicacion, .info {
+        width: 100%;
+    }
+}
+#map{
+    display: flex;
+    position: relative; 
+    width: 100%;
+    height: 40vh;
+}
+/*Mas experiencias*/
+.MasExperiencias{
+
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una sola línea */
+    justify-content: center; /* Centra los elementos dentro */
+    align-items: center; /* Asegura que los elementos estén alineados */
+    width: 100%;
+    min-height: 40vh; /* Aumenta la altura mínima para evitar superposición */
+    padding: 20px; /* Añade espacio interno para separación */
+    margin-top: 50px; /* Da espacio con respecto a la sección anterior */
+    position: relative; /* Asegura que se ubique correctamente en el flujo del documento */
+    background-color: #f8f8f8; /* Opcional: establece un fondo para visualizar mejor */
+}
+#carouselExperiencias{
+    
+}
