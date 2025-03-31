@@ -197,6 +197,11 @@ video {
 
 
 /* Sección Conócenos */
+.sobrenosotros{
+
+    display: flex;
+    flex-direction: column;
+}
 #conocenos {
     width: 100%;
     height: 60vh;
