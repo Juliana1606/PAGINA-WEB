@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    padding: 20px 50px;
+    background-color: #001dff;
+    font-family: 'Jockey One', sans-serif;
+    width: 100%;
+    height: 80px;
+}
+
+.head .LOGO-AEROSPOR {
+    width: 150px; 
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 50px; /* Espaciado entre los elementos */
+    flex-grow: 1; /* Permite que ocupe el espacio central */
+    justify-content: center; /* Centra los elementos en el header */
+}
+
+.nav .Texto-Menu {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-contactanos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    border-radius: 37px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.boton-contactanos .text-wrapper-6 {
+    font-size: 22px;
+    color: #000000;
+}
+.nav .text-wrapper {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Necesario para el pseudo-elemento */
+    padding-bottom: 20px; /* Espacio entre el texto y la línea */
+}
+
+.nav .text-wrapper::after {
+    content: ""; /* Crea el pseudo-elemento */
+    width: 0%; /* Inicia sin ancho */
+    height: 3px; /* Grosor de la línea */
+    background-color: #ffffff; /* Color de la línea */
+    bottom: 0; /* Se ubica debajo del texto */
+    left: 50%; /* Centra la línea */
+    transform: translateX(-50%); /* Ajuste para centrar */
+    transition: width 0.3s ease-in-out; /* Animación suave */
+}
+
+.nav .text-wrapper:hover::after {
+    width: 100%; /* Expande la línea al 100% del texto */
+}
+main {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center; /* Centra el contenido */
+    
+}
+/* Estilos generales */
+.frame-principal {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor del texto y botón */
+.group {
+    position: absolute;
+    align-items: flex-start;
+    width: 700px;
+    height: 200px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Texto */
+.text-wrapper {
+    font-family: "Jockey One", sans-serif;
+    font-size: 80px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.titulo {
+    text-align: center;
+    margin-top: 60px;     
+    margin-bottom: 40px;
+  }
+  
+  .titulo h2 {
+    font-family: "Jockey One", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: black;
+  }
+  
+  .titulo span {
+    display: inline-block;
+    border-bottom: 3px solid blue;
+    padding-bottom: 4px;
+    margin-bottom: 5px;
+  }
+
+.contenedor-Tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* SOLO 2 columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Cada tarjeta */
+  .Tarjeta {
+    border-radius: 12px;
+    background-color: #c5b38d;
+    border: 2px solid #ddd;
+    font-family: 'Jockey One', sans-serif;
+    border-radius: 16px; /* Bordes redondeados más suaves */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente todo el contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .Tarjeta:hover {
+    transform: translateY(-5px); /* Animación sutil al pasar el ratón */
+  }
+
+  /* Imagen superior */
+  .Tarjeta img {
+    display: block;
+    margin: 15px auto;
+    width: 75%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Contenido interior */
+ .contenido {
+  font-family: 'Jockey One', sans-serif;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+  /* Detalles */
+  .detalles {
+    font-size: 15px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  
+  /* Precio */
+  .precio-vuelo {
+    font-weight: bold;           
+    color: black;                
+    background-color: yellow;    
+    display: inline-block;       
+    padding: 2px 6px;            
+    border-radius: 4px;          
+  }
+  /* Botones */
+  .botones {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  /*Boton de mas informacion*/
+  button.info {
+    background-color: #004cff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /*Boton de reserva*/
+  button.reservar {
+    background-color: #ff3c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .contacto {
+    padding: 40px 20px;
+    width: 100%;
+    font-family: 'Jockey One', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .contacto h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid blue;
+    display: inline-block;
+  }
+  .contenedor-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 20px;
+    
+  }
+  
+  .info-contacto {
+    background-color: #e6e6e6;
+    text-align: left;
+    max-width: 400px;
+    flex: 1;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+  
+  }
+
+  
+  .info-contacto h3 {
+    color: #003cff;
+    margin-bottom: 10px;
+  }
+  
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    width: 350px;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Jockey One', sans-serif;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .formulario-contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .formulario-contacto label {
+    color: #003cff;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .terminos {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .boton-enviar {
+    background-color: red;
+    color: white;
+
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    align-self: center;
+  }
