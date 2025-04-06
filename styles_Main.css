@@ -455,3 +455,146 @@ video {
     position: relative; /* Asegura que se ubique correctamente en el flujo del documento */
     background-color: #f8f8f8; /* Opcional: establece un fondo para visualizar mejor */
 }
+.contacto {
+    padding: 40px 20px;
+    width: 100%;
+    font-family: 'Jockey One', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .contacto h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid blue;
+    display: inline-block;
+  }
+  .contenedor-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 20px;
+    
+  }
+  .item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .item-contacto img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-contacto {
+    background-color: #e6e6e6;
+    text-align: left;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    width: 100%;
+  }
+
+  
+  .info-contacto h3 {
+    color: #003cff;
+    margin-bottom: 20px;
+  }
+  .item-contacto p {
+    margin: 0;
+    font-size: 16px;
+  }
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    width: 350px;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Jockey One', sans-serif;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .formulario-contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .formulario-contacto label {
+    color: #003cff;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .terminos {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .boton-enviar {
+    background-color: red;
+    color: white;
+
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    align-self: center;
+  }
+
+  .footer-redes {
+    background-color: #000;
+    color: white;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-family: 'Jockey One', sans-serif;
+    border-top: 3px solid #0070ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  .iconos-redes a img {
+    width: 30px;
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .iconos-redes a img:hover {
+    transform: scale(1.1);
+  }

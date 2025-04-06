@@ -246,24 +246,37 @@ main {
     padding: 20px;
     
   }
+  .item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
   
+  .item-contacto img {
+    width: 40px;
+    height: 40px;
+  }
+
   .info-contacto {
     background-color: #e6e6e6;
     text-align: left;
     max-width: 400px;
-    flex: 1;
     padding: 20px;
-    width: 300px;
     border-radius: 8px;
-  
+    flex: 1;
+    width: 100%;
   }
 
   
   .info-contacto h3 {
     color: #003cff;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
-  
+  .item-contacto p {
+    margin: 0;
+    font-size: 16px;
+  }
   .formulario-contacto {
     display: flex;
     flex-direction: column;
@@ -322,4 +335,34 @@ main {
     padding: 8px 16px;
     cursor: pointer;
     align-self: center;
+  }
+
+  .footer-redes {
+    background-color: #000;
+    color: white;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-family: 'Jockey One', sans-serif;
+    border-top: 3px solid #0070ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  .iconos-redes a img {
+    width: 30px;
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .iconos-redes a img:hover {
+    transform: scale(1.1);
   }
