@@ -76,7 +76,7 @@
     cursor: pointer;
 }
 .boton-contactanos:hover {
-    background-color: #b6b6b6;
+    background-color: #c0bebe;
     transform: scale(1.05);
 }
 .boton-contactanos .text-wrapper-6 {
@@ -612,7 +612,10 @@ video {
     cursor: pointer;
     align-self: center;
   }
-
+  .boton-enviar:hover {
+    background-color: rgb(227, 0, 0);
+    transform: scale(1.05);
+   }
   .footer-redes {
     background-color: #000;
     color: white;

@@ -49,7 +49,106 @@
   .nav-links a:hover {
     color: yellow;
   }
-  
+  .head {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    padding: 20px 50px;
+    background-color: #001dff;
+    font-family: 'Jockey One', sans-serif;
+    width: 100%;
+    height: 80px;
+}
+
+.head .LOGO-AEROSPOR {
+    width: 150px; 
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 50px; /* Espaciado entre los elementos */
+    flex-grow: 1; /* Permite que ocupe el espacio central */
+    justify-content: center; /* Centra los elementos en el header */
+}
+
+.nav .Texto-Menu {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.Texto-Menu {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.Texto-Menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #e7e7e7; /* o el color que prefieras */
+  transition: width 0.3s ease;
+}
+
+.Texto-Menu:hover {
+  transform: scale(1.1);
+ 
+}
+
+.Texto-Menu:hover::after {
+  width: 100%;
+}
+.boton-contactanos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    border-radius: 37px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.boton-contactanos .text-wrapper-6 {
+    font-size: 22px;
+    color: #000000;
+}
+.boton-contactanos:hover {
+  background-color: #c0bebe;
+  transform: scale(1.05);
+}
+.nav .text-wrapper {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Necesario para el pseudo-elemento */
+    padding-bottom: 20px; /* Espacio entre el texto y la línea */
+}
+
+.nav .text-wrapper::after {
+    content: ""; /* Crea el pseudo-elemento */
+    width: 0%; /* Inicia sin ancho */
+    height: 3px; /* Grosor de la línea */
+    background-color: #ffffff; /* Color de la línea */
+    bottom: 0; /* Se ubica debajo del texto */
+    left: 50%; /* Centra la línea */
+    transform: translateX(-50%); /* Ajuste para centrar */
+    transition: width 0.3s ease-in-out; /* Animación suave */
+}
+
+.nav .text-wrapper:hover::after {
+    width: 100%; /* Expande la línea al 100% del texto */
+}
   .boton-contacto {
     background-color: white;
     color: black;
@@ -65,9 +164,67 @@
   
   .video-section video {
     width: 100%;  
-    height: 100%; 
+    height: 40vh; 
 
   }
+  /* Flechas de navegación */
+.prev, .next {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Indicadores circulares */
+
+.dot {
+  width: 12px;
+  height: 20px;
+  background: #bbb;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #0026ff;
+}
+
+
+/* Indicadores del carrusel */
+/* Ajusta la posición de los indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: -25px; /* Separa los indicadores de la imagen */
+  left: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+.carousel-indicators li {
+  background-color: #0026ff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+  margin: 5px; /* Espaciado entre indicadores */
+  
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
   .info-servicio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -202,11 +359,14 @@
     color: white;
     padding: 14px 30px;
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
-    text-decoration: none;
+   
   }
-  
+  .boton-reserva:hover {
+    background-color: rgb(223, 3, 3);
+    transform: scale(1.05);
+  }
   .mapa {
     margin-top: 60px;
     text-align: center;
@@ -263,6 +423,7 @@
     width: 40px;
     height: 40px;
   }
+  
 
   .info-contacto {
     background-color: #e6e6e6;
@@ -341,6 +502,10 @@
     padding: 8px 16px;
     cursor: pointer;
     align-self: center;
+  }
+  .boton-enviar:hover {
+    background-color: rgb(223, 3, 3);
+    transform: scale(1.05);
   }
 
   .footer-redes {

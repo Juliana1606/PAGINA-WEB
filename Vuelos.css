@@ -38,7 +38,34 @@
     text-align: center;
     cursor: pointer;
 }
+.Texto-Menu {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
 
+.Texto-Menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #e7e7e7; /* o el color que prefieras */
+  transition: width 0.3s ease;
+}
+
+.Texto-Menu:hover {
+  transform: scale(1.1);
+ 
+}
+
+.Texto-Menu:hover::after {
+  width: 100%;
+}
 .boton-contactanos {
     display: flex;
     align-items: center;
@@ -52,6 +79,10 @@
 .boton-contactanos .text-wrapper-6 {
     font-size: 22px;
     color: #000000;
+}
+.boton-contactanos:hover {
+  background-color: #c0bebe;
+  transform: scale(1.05);
 }
 .nav .text-wrapper {
     font-size: 22px;
@@ -143,7 +174,7 @@ main {
   /* Cada tarjeta */
   .Tarjeta {
     border-radius: 12px;
-    background-color: #c5b38d;
+    background-color: #fbfbfb;
     border: 2px solid #ddd;
     font-family: 'Jockey One', sans-serif;
     border-radius: 16px; /* Bordes redondeados más suaves */
@@ -167,7 +198,12 @@ main {
     height: auto;
     border-radius: 12px;
   }
-  
+  h3{
+    font-family: "Jockey One", Helvetica;
+  }
+  span{
+    font-family: "Homenaje-Regular", Helvetica;
+  }
   /* Contenido interior */
  .contenido {
   font-family: 'Jockey One', sans-serif;
@@ -194,7 +230,11 @@ main {
     background-color: yellow;    
     display: inline-block;       
     padding: 2px 6px;            
-    border-radius: 4px;          
+    border-radius: 4px;  
+    font-family: Jua-Regular, Helvetica;        
+  }
+  .descripcion {
+    font-family: "Homenaje-Regular", Helvetica;
   }
   /* Botones */
   .botones {
@@ -208,6 +248,7 @@ main {
   button.info {
     background-color: #004cff;
     color: white;
+    font-family: 'Jockey One', sans-serif;
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
@@ -218,6 +259,7 @@ main {
   button.reservar {
     background-color: #ff3c3c;
     color: white;
+    font-family: 'Jockey One', sans-serif;
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
@@ -336,7 +378,10 @@ main {
     cursor: pointer;
     align-self: center;
   }
-
+  .boton-enviar:hover {
+    background-color: rgb(227, 0, 0);
+    transform: scale(1.05);
+}
   .footer-redes {
     background-color: #000;
     color: white;
