@@ -24,20 +24,36 @@
 <body>
 
   <header class="head">
-    <img class="LOGO-AEROSPOR" src="Sin_fondo.png" alt="Logo Aerospor">
-    <nav class="nav">
-        <div class="Texto-Menu">INICIO</div>
-        <div class="Texto-Menu">VUELOS RECREATIVOS</div>
-        <div class="Texto-Menu">AERONAVES</div>
-        <div class="Texto-Menu">¿QUIENES SOMOS?</div>
-        <div class="Texto-Menu">ESCUELA</div>
-        <div class="Texto-Menu">EVENTOS</div>
-    </nav>
-    <div class="boton-contactanos">
+    <img class="LOGO-AEROSPOR" src="Sin_fondo.png" alt="Logo Aerospor" />
+  
+    <!-- Botón hamburguesa con animación -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menú">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  
+    <nav class="nav" id="mainNav">
+      <a class="Texto-Menu" href="Main.html">INICIO</a>
+      <a class="Texto-Menu" href="Vuelos.html">VUELOS RECREATIVOS</a>
+      <div class="Texto-Menu">AERONAVES</div>
+      <div class="Texto-Menu">¿QUIENES SOMOS?</div>
+      <div class="Texto-Menu">ESCUELA</div>
+      <div class="Texto-Menu">EVENTOS</div>
+  
+      <a class="boton-contactanos" href="#formulario-contacto">
         <span class="Texto-contacto">CONTACTANOS</span>
-    </div>
-</header>
+      </a>
+    </nav>
+  </header>
     <main>
+      <nav aria-label="breadcrumb" class="bg-light py-2 pl-3">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="Main.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="Vuelos.html">Vuelos Recreativos</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Informacion</li>
+        </ol>
+      </nav>
       <!--
         <section class="video-section">
           <div id="carouselinfo" class="carousel slide" data-ride="carousel">
@@ -140,7 +156,8 @@
               </section>
               
               <!-- Botón de reserva -->
-              <div class="reserva-boton">
+              <div class="reserva-boton" id="Reservar">
+
                 <a href="#" class="boton-reserva">RESERVA AHORA</a>
               </div>
               <section class="mapa">
@@ -157,9 +174,9 @@
               </section>
     </main>
     <footer>
-        <div class="contacto"> 
+        <div class="contacto" id="formulario-contacto"> 
             <h2>CONTACTANOS</h2>
-            <div class="contenedor-contacto">
+            <div class="contenedor-contacto" id="seccionContacto">
               
               <div class="info-contacto">
                 <h3>Nos encuentras aquí</h3>

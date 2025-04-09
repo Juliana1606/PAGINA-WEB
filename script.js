@@ -1,3 +1,4 @@
+console.log("🔁 Menú hamburguesa activado");
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".video-slide");
     const dots = document.querySelectorAll(".ellipse");
@@ -77,3 +78,36 @@ document.addEventListener("DOMContentLoaded", () => {
     L.marker([4.23419, -74.83548]).addTo(map)
         .bindPopup('📍 Aquí está estamos')
         .openPopup();
+//funcion para que funcione el menu hamburgesa
+    const toggleButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggleButton.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+//funcion para activar la animacion del menu hamburgesa
+function toggleMenu() {
+    const nav = document.getElementById("mainNav");
+    const burger = document.querySelector(".hamburger");
+  
+    nav.classList.toggle("show");
+    burger.classList.toggle("active");
+  }
+
+  //funciones para navegar entre pantallas
+  document.addEventListener("DOMContentLoaded", function () {
+    // Ir a Vuelos.html
+    document.getElementById("linkVuelos").addEventListener("click", function () {
+      window.location.href = "Vuelos.html";
+    });
+
+    // Ir a Informacion.html
+    document.getElementById("botonReserva").addEventListener("click", function () {
+      window.location.href = "Informacion.html";
+    });
+
+    // Scroll a la sección de contacto
+    document.getElementById("botonContacto").addEventListener("click", function () {
+      document.getElementById("seccionContacto").scrollIntoView({ behavior: "smooth" });
+    });
+  });

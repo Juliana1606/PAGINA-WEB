@@ -10,152 +10,211 @@
     font-family: 'Jockey One', sans-serif;
   }
   
-  /* Header usando Grid */
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
-    background-color: #0032ff;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: flex-start; 
-    padding-left: 150px; 
-  }
-  .logo img {
-    width: 120px;  
-    height: 100px; 
-    width: auto;
-    max-width: 100%;
-  }
-  .nav-links {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .nav-links a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: yellow;
-  }
   .head {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    padding: 20px 50px;
+    justify-content: space-between;
+    padding: 20px 30px;
     background-color: #001dff;
     font-family: 'Jockey One', sans-serif;
     width: 100%;
-    height: 80px;
+    height: 20vh;
+    flex-wrap: wrap;
+    position: relative;
 }
 
-.head .LOGO-AEROSPOR {
-    width: 150px; 
+.LOGO-AEROSPOR {
+    width: 150px;
     height: auto;
 }
 
 .nav {
     display: flex;
-    gap: 50px; /* Espaciado entre los elementos */
-    flex-grow: 1; /* Permite que ocupe el espacio central */
-    justify-content: center; /* Centra los elementos en el header */
+    gap: 30px;
+    justify-content: center;
+    flex-grow: 1;
 }
 
-.nav .Texto-Menu {
-    font-size: 22px;
-    color: #ffffff;
-    text-align: center;
-    cursor: pointer;
-}
 .Texto-Menu {
-  position: relative;
-  display: inline-block;
-  padding: 10px 15px;
-  font-weight: 500;
-  transition: transform 0.2s ease, color 0.2s ease;
-  cursor: pointer;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 15px;
 }
 
 .Texto-Menu::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0%;
-  background-color: #e7e7e7; /* o el color que prefieras */
-  transition: width 0.3s ease;
-}
-
-.Texto-Menu:hover {
-  transform: scale(1.1);
- 
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #e7e7e7;
+    transition: width 0.3s ease;
 }
 
 .Texto-Menu:hover::after {
-  width: 100%;
+    width: 100%;
 }
+
 .boton-contactanos {
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: #d9d9d9;
     border-radius: 37px;
     padding: 10px 20px;
     cursor: pointer;
+    
 }
 
-.boton-contactanos .text-wrapper-6 {
-    font-size: 22px;
-    color: #000000;
-}
 .boton-contactanos:hover {
-  background-color: #c0bebe;
-  transform: scale(1.05);
+    background-color: #c0bebe;
+    transform: scale(1.05);
 }
-.nav .text-wrapper {
-    font-size: 22px;
-    color: #ffffff;
-    text-align: center;
-    cursor: pointer;
-    position: relative; /* Necesario para el pseudo-elemento */
-    padding-bottom: 20px; /* Espacio entre el texto y la línea */
-}
-
-.nav .text-wrapper::after {
-    content: ""; /* Crea el pseudo-elemento */
-    width: 0%; /* Inicia sin ancho */
-    height: 3px; /* Grosor de la línea */
-    background-color: #ffffff; /* Color de la línea */
-    bottom: 0; /* Se ubica debajo del texto */
-    left: 50%; /* Centra la línea */
-    transform: translateX(-50%); /* Ajuste para centrar */
-    transition: width 0.3s ease-in-out; /* Animación suave */
-}
-
-.nav .text-wrapper:hover::after {
-    width: 100%; /* Expande la línea al 100% del texto */
-}
-  .boton-contacto {
-    background-color: white;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 10px;
-  }
+.nav .Texto-Menu {
+  text-decoration: none;
   
+}
+
+.nav .Texto-Menu:hover {
+  text-decoration: none;
+  color: white;
+}
+/* Botón de contacto */
+.nav .boton-contactanos {
+  text-decoration: none;
+ 
+}
+
+.nav .boton-contactanos:hover {
+  text-decoration: none;
+  
+}
+
+/* ---------------------- */
+/* NUEVO: Botón Hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------------------- */
+/* Responsive: Menú móvil */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #001dff;
+        padding: 10px 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 99;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .Texto-Menu {
+        padding: 10px 0;
+    }
+
+    .boton-contactanos {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+  
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-left: auto;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #001dff;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 30px 0;
+    gap: 30px;
+  }
+
+  .nav.show {
+    transform: translateY(0%);
+  }
+}
+
+a.Texto-Menu {
+  color: fff;            /* Hereda el color del padre */
+  text-decoration: none;     /* Sin subrayado */
+  cursor: default;           /* Si no quieres la manito, usa default; si sí, usa pointer */
+}
+
+a.Texto-Menu:hover {
+  color: fff;              /* O cualquier efecto que quieras al pasar el mouse */
+}
+.breadcrumb a {
+  color: #333;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #000;
+  text-decoration: underline;
+}
   /* Sección del video usando Grid */
   .video-section {
     display: grid;
@@ -355,6 +414,7 @@
   }
   
   .boton-reserva {
+    text-decoration: none;
     background-color: red;
     color: white;
     padding: 14px 30px;
@@ -364,6 +424,8 @@
    
   }
   .boton-reserva:hover {
+    text-decoration: none;
+    color:white;
     background-color: rgb(223, 3, 3);
     transform: scale(1.05);
   }
