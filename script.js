@@ -37,10 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
 /*<!-- Script para el mapa y el carrusel -->*/
 
     document.addEventListener("DOMContentLoaded", function () {
-        // Inicializar mapa
-        const map = L.map('map').setView([4.2028, -74.6400], 15);
+        // Inicializar mapa4.23413228859429, -74.83600247779756
+        const map = L.map('map').setView([4.23413228859429, -74.83600247779756], 15);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-        L.marker([4.2028, -74.6400]).addTo(map).bindPopup('Aquí estamos 🚀').openPopup();
+        L.marker([4.23413228859429, -74.83600247779756]).addTo(map).bindPopup('Aquí estamos 🚀').openPopup();
+        // Extra (accesibilidad y enlaces)
+        document.querySelector('a[href="#map"]').addEventListener('click', function () {
+            document.getElementById("map").scrollIntoView({ behavior: "smooth" });
+            setTimeout(() => {
+              map.invalidateSize(); // importante si se muestra dentro de un contenedor que cambia
+            }, 500);
+          });
 
         // Carrusel de imágenes
         let index = 0;
@@ -65,19 +72,26 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCarousel();
         });
     });
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0, // ← prueba poner esto en 0
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     
     // Crea el mapa y establece la vista en las coordenadas deseadas
-    var map = L.map('map').setView([4.23419, -74.83548], 15); // [latitud, longitud], nivel de zoom
+    var map = L.map('map').setView([4.2045, -74.6433], 13); // Coordenadas de ejemplo
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+  L.marker([4.2045, -74.6433]).addTo(map)
+      .bindPopup('Estamos aquí!')
+      .openPopup();
 
-    // Agrega el mapa base de OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Agrega un marcador en la ubicación deseada
-    L.marker([4.23419, -74.83548]).addTo(map)
-        .bindPopup('📍 Aquí está estamos')
-        .openPopup();
+   
 //funcion para que funcione el menu hamburgesa
     const toggleButton = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
@@ -111,3 +125,4 @@ function toggleMenu() {
       document.getElementById("seccionContacto").scrollIntoView({ behavior: "smooth" });
     });
   });
+  

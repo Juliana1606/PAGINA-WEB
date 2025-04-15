@@ -1,889 +1,535 @@
+/* Fuente principal */
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
-
+/* Reset y globales */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* Estilos generales (se mantienen igual) */
+
+body {
+  font-family: 'Jockey One', sans-serif;
+}
+
+/* ------------------ Encabezado ------------------ */
 .head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
-    background-color: #001dff;
-    font-family: 'Jockey One', sans-serif;
-    width: 100%;
-    height: 20vh;
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  background-color: #001dff;
+  height: 20vh;
 }
 
 .LOGO-AEROSPOR {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
 .nav {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  text-decoration: none;
 }
-
+.nav .Texto-Menu {
+  text-decoration: none;
+  color: white
+  
+}
 .Texto-Menu {
-    font-size: 22px;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    padding: 10px 15px;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 15px;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .Texto-Menu::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0%;
-    background-color: #e7e7e7;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e7e7e7;
+  transition: width 0.3s ease;
+  text-decoration: none;
 }
 
 .Texto-Menu:hover::after {
-    width: 100%;
+  width: 100%;
+  text-decoration: none;
 }
 
 .boton-contactanos {
-    display: flex;
-    align-items: center;
-    background-color: #d9d9d9;
-    border-radius: 37px;
-    padding: 10px 20px;
-    cursor: pointer;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  border-radius: 37px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .boton-contactanos:hover {
-    background-color: #c0bebe;
-    transform: scale(1.05);
-}
-/* Estilo para todos los enlaces del menú con clase Texto-Menu */
-a.Texto-Menu {
-    color: fff;            /* Hereda el color del padre */
-    text-decoration: none;     /* Sin subrayado */
-    cursor: default;           /* Si no quieres la manito, usa default; si sí, usa pointer */
-  }
-  
-a.Texto-Menu:hover {
-    color: fff;              /* O cualquier efecto que quieras al pasar el mouse */
-  }
-
-.nav .Texto-Menu {
-  text-decoration: none;
-  
+  background-color: #c0bebe;
+  transform: scale(1.05);
 }
 
-.nav .Texto-Menu:hover {
-  text-decoration: none;
-  
-}
-
-/* Botón de contacto */
-.nav .boton-contactanos {
-    text-decoration: none;
-   
-  }
-  
-  .nav .boton-contactanos:hover {
-    text-decoration: none;
-    
-  }
-/* NUEVO: Botón Hamburguesa */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* ---------------------- */
-/* Responsive: Menú móvil */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        background-color: #001dff;
-        padding: 10px 20px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 99;
-    }
-
-    .nav.show {
-        display: flex;
-    }
-
-    .Texto-Menu {
-        padding: 10px 0;
-    }
-
-    .boton-contactanos {
-        margin-top: 10px;
-        width: 100%;
-        justify-content: center;
-    }
-}
+/* ------------------ Menú Hamburguesa ------------------ */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    margin-left: auto;
-  }
-  
-  .hamburger .line {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  
-  .hamburger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger.active .line:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
-  
-    .nav {
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #001dff;
-      transform: translateY(-200%);
-      transition: transform 0.3s ease-in-out;
-      z-index: 1000;
-      padding: 30px 0;
-      gap: 30px;
-    }
-  
-    .nav.show {
-      transform: translateY(0%);
-    }
-  }
- 
-main {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ------------------ Responsivo Encabezado ------------------ */
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en columna */
-    align-items: center; /* Centra el contenido */
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
     
+    flex-direction: column;
+    align-items: center;
+    background-color: #001dff;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px 0;
+    gap: 30px;
+    z-index: 1000;
+  }
+
+  .nav.show {
+    transform: translateY(0%);
+  }
+
+  .boton-contactanos {
+    width: 100%;
+    justify-content: center;
+  }
 }
-/* Estilos generales */
+
+/* ------------------ Carrusel Principal ------------------ */
 .frame-principal {
-    width: 100%;
-    height: 70vh;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
 }
-
-/* Contenedor del carrusel */
-#carouselvideos {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    
-}
-
-/* Slides de video */
-.video-slide {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
 
 .carousel-item video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#carouselvideos .carousel-indicators {
-    
-    bottom: 60px; /* Ajusta la posición */
-    left: 35%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
-.carousel-indicators li {
-    background-color: #0026ff;
-   
-    height: 12px;
-    border-radius: 50%;
-    opacity: 0.6;
-    bottom: 10px !important;
-  margin: 0 auto;
   width: 100%;
-  justify-content: center;
-    
-    
+  height: 70vh;
+  object-fit: cover;
 }
+
+.carousel-indicators [data-bs-target] {
+  background-color: #0026ff;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+  margin: 0 4px;
+}
+
 .carousel-indicators .active {
-    opacity: 1;
-    background-color: #ffffff;
+  background-color: #ffffff;
+  opacity: 1;
 }
 
-
-/* Contenedor del texto y botón */
 .group {
-    position: absolute;
-    align-items: flex-start;
-    width: 700px;
-    height: 200px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  position: absolute;
+  width: 90%;
+  max-width: 700px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
 }
 
-/* Texto */
 .text-wrapper {
-    font-family: "Jockey One", sans-serif;
-    font-size: 80px;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.nav .Texto-Menu {
-  text-decoration: none;
-  
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.nav .Texto-Menu:hover {
-  text-decoration: none;
-  color: white;
-}
-
-/* Botón estilizado */
 .boton-reserva {
-    text-decoration: none;
-    display: inline-block;
-    width: 250px;
-    height: 60px;
-    background-color: #e92424;
-    border: none;
-    border-radius: 44px;
-    font-family: "Jockey One", sans-serif;
-    font-size: 30px;
-    color: #ffffff;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s ease;
+  width: 350px;
+  height: 60px;
+  background-color: #e92424;
+  border-radius: 40px;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .boton-reserva:hover {
-    text-decoration: none;
-    color:white;
-    background-color: #c51e1e;
-    transform: scale(1.05);
-}
-
-/* Accesibilidad (oculta texto visualmente pero lo mantiene para lectores de pantalla) */
-.sr-only {
-    
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-/* Contenedor general */
-.container {
-    width: 90%;
-    margin: auto;
-    text-align: center;
+  text-decoration: none;
+  background-color: #c51e1e;
+  transform: scale(1.05);
+  color: white;
+  
 }
 
 
-/* Sección Conócenos */
-.sobrenosotros{
-
-    display: flex;
-    flex-direction: column;
-}
+/* ------------------ Sección Conócenos ------------------ */
 #conocenos {
-    width: 100%;
-    height: 60vh;
-    display:flex;
-    justify-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-between;
-    
-    padding: 40px 0; /* Espaciado para mejor visualización */
-}
-.about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color:#bbb;
-    padding: 40px;
-    align-items: center;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: #bbb;
+  justify-items: center;
 }
 
 .about-content {
-    
-    width: 45%;
-    height: 20%;
-    align-items: flex-start;
-    text-align: center;
+  padding: 20px;
+  justify-items: center;
 }
 
 .about h2 {
-    
-    font-family: 'Jockey One', bold;
-    color: #0026ff;
+  color: #0026ff;
+  margin-bottom: 20px;
 }
 
 .about p {
-    font-family: 'Jockey One', sans-serif;
-    font-size: 18px;
+  font-size: 18px;
 }
-/* Ajuste para el carrusel en el lado izquierdo */
+
+/* Carrusel Conócenos */
 #carouselConocenos {
-    width: 30%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
+  width: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* Carrusel de imágenes */
-.carousel {
-    width: 45%;
-    overflow: hidden;
-    margin-right: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.carousel-images {
-    align-items: center;
-    width: 20%;
-    height: 20%;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Flechas de navegación */
-.prev, .next {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 50%;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* Indicadores circulares */
-
-.dot {
-    width: 12px;
-    height: 20px;
-    background: #bbb;
-    border-radius: 50%;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #0026ff;
-}
-
-
-/* Indicadores del carrusel */
-/* Ajusta la posición de los indicadores */
-.carousel-indicators {
-    position: absolute;
-    bottom: -25px; /* Separa los indicadores de la imagen */
-    left: 35%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    align-content: center;
-}
-.carousel-indicators li {
-    background-color: #0026ff;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    opacity: 0.6;
-    margin: 5px; /* Espaciado entre indicadores */
-    
+#CaruselConocenos .carousel-indicators [data-bs-target] {
+  background-color: #0026ff;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+  margin: 0 4px;
 }
 
 .carousel-indicators .active {
-    opacity: 1;
+  background-color: #ffffff;
+  opacity: 1;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #carouselConocenos, .about-content {
-        width: 100%;
-        height: auto;
-    }
+  #conocenos {
+    grid-template-columns: 1fr;
+  }
 }
 
-#ubicacion{
-
-    width: 100%;
-    height: 95vh;
-    display:flex;
-    justify-items: center;    
-    padding: 40px; /* Espaciado para mejor visualización */
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
-
+/* ------------------ Sección Ubicación ------------------ */
+#ubicacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  grid-template-rows: auto auto auto;    /* tres filas automáticas */
+  gap: 1rem;
+  padding: 5% 5%;
+  overflow: hidden;
+  align-items: center;
 }
+
 .info {
-    width: 50%;
-    height: 20%;
-    align-items: flex-start;
-    text-align: center;
-    padding: 20px;
+  padding: 20px;
+  grid-column: 2;
+  grid-row: 1;
+  justify-items: center;
+  
+
 }
 
-.location h2 {
-    
-    font-family: 'Jockey One', bold;
-    color: #0026ff;
+#carouselUbicacion {
+  width: 80%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1;
+  grid-row: 1;
 }
-.Guia{
-    display: flex;
 
-    padding: 30px;
-}
-/*Estilos seccion ubicacion*/
 #ubicacion .boton-reserva {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 400px;
-    height: 60px;
-    background-color: #ffd900;
-    border: none;
-    border-radius: 0px;
-    font-family: "Jockey One", sans-serif;
-    color: #ffffff;
-    text-align: center;
-    cursor: pointer;
-    justify-content: space-around;
-    transition: background 0.3s ease-in-out, transform 0.2s ease;
-    
+  width: 100%;
+  background-color: #ffd900;
+  color: white;
+  border-radius: 0;
+  justify-content: center;
 }
 
 #ubicacion .boton-reserva:hover {
-    background-color: #ffee53;
-    transform: scale(1.05);
+  background-color: #ffee53;
 }
-.boton-reserva i {
-    margin-top: 8px; /* Espacio entre el ícono y el texto */
-    font-size: 40px; /* Ajusta el tamaño del ícono */
-    margin: auto;
+
+.Guia {
+  grid-column: 1 / -1; /* Ocupa ambas columnas */
+  grid-row: 2;
+  padding: 0 30%;
+  text-align: center;
 }
-#carouselUbicacion {
-    width: 40%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-#carouselUbicacion .carousel-indicators {
-    position: absolute;
-    bottom: 5px; /* Ajusta la posición */
-    left: 35%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
-.carousel-indicators li {
-    background-color: #0026ff;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    opacity: 0.6;
-    margin: 5px; /* Espaciado entre indicadores */
-    
-}
-.carousel-indicators .active {
-    opacity: 1;
-    background-color: #ffffff;
-}
+
+/* ------------------ Versión Responsive ------------------ */
 @media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  #ubicacion {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
 
-    #carouselUbicacion, .info {
-        width: 100%;
-    }
-}
-#map{
-    display: flex;
-    position: relative; 
-    width: 100%;
-    height: 40vh;
-    
-}
-.espacio{
-
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 10vh;
-
-}
-/*Mas experiencias*/
-.MasExperiencias{
-
-    width: 100%; /* Ocupar todo el ancho visible */
-    min-height: 40vh; /* Ajusta según necesidad */
-    display: flex;
-    justify-content: space-evenly;
-    padding: 40px;
-    background-color: #f8f8f8; /* Opcional: establece un fondo para visualizar mejor */
-}
-#caruselExperiencias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-}
-.MasExperiencias .video {
-    width: 50%;
-    object-fit: cover;
-}
-.contacto {
-    padding: 40px 20px;
-    width: 100%;
-    font-family: 'Jockey One', sans-serif;
+  .info {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
     text-align: center;
-    margin-top: 40px;
-  }
-  .contacto h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid blue;
-    display: inline-block;
-  }
-  .contenedor-contacto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    gap: 50px;
-    padding: 20px;
-    
-  }
-  .item-contacto {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 35px;
-  }
-  
-  .item-contacto img {
-    width: 40px;
-    height: 40px;
   }
 
-  .info-contacto {
-    background-color: #e6e6e6;
-    text-align: left;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1;
+  #carouselUbicacion {
+    grid-column: 1;
+    grid-row: 1;
     width: 100%;
   }
 
-  
-  .info-contacto h3 {
-    color: #003cff;
-    margin-bottom: 20px;
+  .Guia {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 0 10%;
   }
-  .item-contacto p {
-    margin: 0;
-    font-size: 16px;
-  }
-  .formulario-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-    width: 350px;
-  }
-  
-  .formulario-contacto input,
-  .formulario-contacto textarea {
-    padding: 10px;
-    border: none;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    font-family: 'Jockey One', sans-serif;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 14px;
-  }
-  
-  .formulario-contacto textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  .formulario-contacto label {
-    color: #003cff;
-    font-size: 16px;
-    text-align: left;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .terminos {
-    font-size: 14px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    font-size: 12px;
-    margin-bottom: 10px;
-    color: black;
-  }
-  
-  .boton-enviar {
-    background-color: red;
-    color: white;
+}
 
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    align-self: center;
-  }
-  .boton-enviar:hover {
-    background-color: rgb(227, 0, 0);
-    transform: scale(1.05);
-   }
-  .footer-redes {
-    background-color: #000;
-    color: white;
-    padding: 1rem 2rem;
-    margin-top: 2rem;
-    font-family: 'Jockey One', sans-serif;
-    border-top: 3px solid #0070ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .footer-titulo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-  }
-  
-  .iconos-redes a img {
-    width: 30px;
-    margin-left: 10px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .iconos-redes a img:hover {
-    transform: scale(1.1);
-  }
+/* ------------------ Sección Más Experiencias ------------------ */
+.MasExperiencias {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+  background-color: #f8f8f8;
+}
 
-  /* ---------------------- */
-/* RESPONSIVE GENERAL PARA MÓVILES */
-@media (max-width: 768px) {
-    .head {
-      flex-direction: column;
-      height: auto;
-      padding: 15px;
-    }
+.MasExperiencias .video {
+  width: 50%;
+  object-fit: cover;
+}
+#MasExperiencias .carousel-indicators [data-bs-target] {
+  background-color: #0026ff;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+  margin: 0 4px;
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+/* ------------------ Sección Contacto ------------------ */
+.contacto {
+  padding: 40px 20px;
+  width: 100%;
+  font-family: 'Jockey One', sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+.contacto h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid blue;
+  display: inline-block;
+}
+.contenedor-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 50px;
+  padding: 20px;
   
-    .LOGO-AEROSPOR {
-      width: 120px;
-    }
-  
-    .nav {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  
-    .Texto-Menu {
-      font-size: 18px;
-    }
-  
-    .boton-contactanos {
-      width: 90%;
-      justify-content: center;
-      margin-top: 10px;
-    }
-  
-    .group {
-      width: 70%;
-      height: auto;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    #carouselvideos .carousel-indicators {
-    
-        bottom: 130px; /* Ajusta la posición */
-        left: 35%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-    }
-    .text-wrapper {
-      font-size: 40px;
-    }
-  
-    .boton-reserva {
-      width: 80%;
-      font-size: 20px;
-      height: 50px;
-    }
- 
-    .about-content, #carouselConocenos {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .about {
-      flex-direction: column;
-    }
-  
-    #ubicacion {
-      flex-direction: column-reverse;
-      height: auto;
-      padding: 20px;
-    }
-  
-    .info {
-      width: 100%;
-      padding: 10px;
-    }
-  
-    #carouselUbicacion {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    .MasExperiencias {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-  
-    .MasExperiencias .video {
-      width: 100%;
-    }
-  
-    .contenedor-contacto {
-      flex-direction: column;
-      gap: 20px;
-      padding: 0;
-    }
-  
-    .info-contacto,
-    .formulario-contacto {
-      width: 100%;
-      max-width: 100%;
-    }
-  
-    .footer-redes {
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-    }
-  
-    .footer-titulo {
-      font-size: 1.2rem;
-    }
-  
-    .iconos-redes a img {
-      width: 25px;
-    }
-  }
-  
+}
+.item-contacto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.item-contacto img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.info-contacto {
+  background-color: #e6e6e6;
+  text-align: left;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  width: 100%;
+}
+
+
+.info-contacto h3 {
+  color: #003cff;
+  margin-bottom: 20px;
+}
+.item-contacto p {
+  margin: 0;
+  font-size: 16px;
+}
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  width: 350px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 10px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  font-family: 'Jockey One', sans-serif;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.formulario-contacto textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.formulario-contacto label {
+  color: #003cff;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.terminos {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.boton-enviar {
+  background-color: red;
+  color: white;
+
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  align-self: center;
+}
+.boton-enviar:hover {
+  background-color: rgb(223, 3, 3);
+  transform: scale(1.05);
+}
+
+.footer-redes {
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-family: 'Jockey One', sans-serif;
+  border-top: 3px solid #0070ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.iconos-redes a img {
+  width: 30px;
+  margin-left: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.iconos-redes a img:hover {
+  transform: scale(1.1);
+}
+
+#map {
+  width: 100%;
+  height: 40vh;
+  grid-column: 1 / -1; /* Ocupa ambas columnas */
+  grid-row: 3;
+  padding: 20%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
