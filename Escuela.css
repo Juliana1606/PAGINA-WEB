@@ -1,0 +1,490 @@
+/* Fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+/* Reset y globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jockey One', sans-serif;
+}
+
+/* ------------------ Encabezado ------------------ */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  background-color: #001dff;
+  height: 20vh;
+}
+
+.LOGO-AEROSPOR {
+  width: 150px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+.nav .Texto-Menu {
+  text-decoration: none;
+  color: white
+  
+}
+.Texto-Menu {
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 15px;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Texto-Menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e7e7e7;
+  transition: width 0.3s ease;
+  text-decoration: none;
+}
+
+.Texto-Menu:hover::after {
+  width: 100%;
+  text-decoration: none;
+}
+
+.boton-contactanos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  border-radius: 37px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.boton-contactanos:hover {
+  background-color: #c0bebe;
+  transform: scale(1.05);
+  color: #000;
+  text-decoration: none;
+}
+
+/* ------------------ Menú Hamburguesa ------------------ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ------------------ Responsivo Encabezado ------------------ */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    
+    flex-direction: column;
+    align-items: center;
+    background-color: #001dff;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px 0;
+    gap: 30px;
+    z-index: 1000;
+  }
+
+  .nav.show {
+    transform: translateY(0%);
+  }
+
+  .boton-contactanos {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.breadcrumb a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  .hero-escuela {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .hero-escuela img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-text h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 2.1rem;
+  }
+  
+  .escuela-info-section {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+  }
+  
+  .escuela-info-section .col {
+    border-right: 1px solid #ccc;
+  }
+  
+  .escuela-info-section .col:last-child {
+    border-right: none;
+  }
+  
+  .escuela-descripcion {
+    background-color: #5c5c5c;
+    color: white;
+    font-family: "Jockey One-Regular", Helvetica;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .escuela-stats-section {
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .escuela-stats-section .col {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .col-md-6 img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .curso-header {
+    text-align: center;
+    padding: 10px;
+    background-color: #2e2eb8;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .curso-detalle {
+    padding: 40px 20px;
+  }
+  
+  .curso-detalle img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  .curso-requisitos {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .curso-requisitos h5 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .curso-requisitos ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  /* Estilo para ítems con check */
+  ul.list-unstyled li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  ul.list-unstyled li::before {
+    content: "✔️";
+    color: #28a745;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  /* Títulos de sección */
+  h4.fw-bold {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-family: "Jokey One-Regular", Helvetica;
+  }
+  
+  /* Espaciado entre columnas de teoría */
+  .row > .col-6 {
+    padding-right: 1rem;
+  }
+  
+  /* Ajustes en párrafos explicativos */
+  .container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .curso-detalle img {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .col img {
+    width: 30%;
+    height: auto;
+  }
+  
+  #faq h2 {
+    color: #dc3545;
+  }
+  
+  .accordion-button {
+    background-color: #ffffff;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+    color: #333;
+    font-size: 1.05rem;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+  }
+  
+  .accordion-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* ------------------ Sección Contacto ------------------ */
+.contacto {
+    padding: 40px 20px;
+    width: 100%;
+    font-family: 'Jockey One', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .contacto h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid blue;
+    display: inline-block;
+  }
+  .contenedor-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 20px;
+    
+  }
+  .item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .item-contacto img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  
+  .info-contacto {
+    background-color: #e6e6e6;
+    text-align: left;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    width: 100%;
+  }
+  
+  
+  .info-contacto h3 {
+    color: #003cff;
+    margin-bottom: 20px;
+  }
+  .item-contacto p {
+    margin: 0;
+    font-size: 16px;
+  }
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    width: 350px;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Jockey One', sans-serif;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .formulario-contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .formulario-contacto label {
+    color: #003cff;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .terminos {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .boton-enviar {
+    background-color:#0004d4;
+    color: white;
+  
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    align-self: center;
+  }
+  .boton-enviar:hover {
+    background-color: #0003aa;
+    transform: scale(1.05);
+  }
+  
+  .footer-redes {
+    background-color: #000;
+    color: white;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-family: 'Jockey One', sans-serif;
+    border-top: 3px solid #0070ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  .iconos-redes a img {
+    width: 30px;
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .iconos-redes a img:hover {
+    transform: scale(1.1);
+  }
+  
+  

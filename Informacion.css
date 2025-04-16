@@ -61,16 +61,18 @@
 .boton-contactanos {
     display: flex;
     align-items: center;
-    background-color: #d9d9d9;
+    background-color:  #d9d9d9;
     border-radius: 37px;
     padding: 10px 20px;
     cursor: pointer;
+    color: #000;
     
 }
 
 .boton-contactanos:hover {
     background-color: #c0bebe;
     transform: scale(1.05);
+    color: #000;
 }
 .nav .Texto-Menu {
   text-decoration: none;
