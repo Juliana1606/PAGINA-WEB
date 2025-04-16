@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   background-color: #d9d9d9;
-  
+  color: #000;
   border-radius: 37px;
   padding: 10px 20px;
   cursor: pointer;
@@ -70,8 +70,9 @@
 }
 
 .boton-contactanos:hover {
-  background-color: #c0bebe;
+  background-color:#c0bebe;
   transform: scale(1.05);
+  color: #000;
 }
 /* Enlaces del menú principal */
 .nav .Texto-Menu {
@@ -356,7 +357,7 @@ main {
 
   /*Boton de reserva*/
   .reservar {
-    background-color: #ff3c3c;
+    background-color: #B30000;
     color: white;
     font-family: 'Jockey One', sans-serif;
     border: none;
@@ -376,7 +377,7 @@ main {
   a.reservar {
     text-decoration: none; /* Quita el subrayado */
 
-    background-color: #ff4c4c; /* Color de fondo (puedes cambiarlo) */
+    background-color: #B30000; /* Color de fondo (puedes cambiarlo) */
     padding: 10px 20px; 
     
     display: inline-block;
@@ -386,7 +387,7 @@ main {
   
   a.reservar:hover {
     text-decoration: none;
-    background-color: #e63939; /* Color al pasar el mouse */
+    background-color:#a70101; /* Color al pasar el mouse */
     color: white; /* Asegúrate que el color no cambie */
   }
   .contacto h2 {
@@ -481,7 +482,7 @@ main {
   }
   
   .boton-enviar {
-    background-color: red;
+    background-color: #0004d4;
     color: white;
 
     border-radius: 5px;
@@ -496,7 +497,7 @@ main {
     align-self: center;
   }
   .boton-enviar:hover {
-    background-color: rgb(227, 0, 0);
+    background-color: #0003aa;
     transform: scale(1.05);
 }
   .footer-redes {

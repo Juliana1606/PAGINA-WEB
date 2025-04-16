@@ -551,7 +551,7 @@ a.Texto-Menu:hover {
   }
   
   .boton-enviar {
-    background-color: red;
+    background-color: #0004d4;
     color: white;
 
     border-radius: 5px;
@@ -566,7 +566,7 @@ a.Texto-Menu:hover {
     align-self: center;
   }
   .boton-enviar:hover {
-    background-color: rgb(223, 3, 3);
+    background-color: #0003aa;
     transform: scale(1.05);
   }
 

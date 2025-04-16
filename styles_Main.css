@@ -76,11 +76,15 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .boton-contactanos:hover {
   background-color: #c0bebe;
   transform: scale(1.05);
+  color: #000;
+  text-decoration: none;
 }
 
 /* ------------------ Menú Hamburguesa ------------------ */
@@ -189,15 +193,15 @@ body {
 
 .text-wrapper {
   font-size: 4rem;
-  color: #ffffff;
+  color: 525252;
   margin-bottom: 20px;
 }
 
 .boton-reserva {
   width: 350px;
   height: 60px;
-  background-color: #e92424;
-  border-radius: 40px;
+  background-color: #0004d4;
+  border-radius: 5px;
   font-size: 25px;
   color: white;
   text-align: center;
@@ -208,13 +212,18 @@ body {
 }
 
 .boton-reserva:hover {
-  text-decoration: none;
-  background-color: #c51e1e;
-  transform: scale(1.05);
+ 
+  background-color: #0003c4;
+  transform: scale(1.5);
   color: white;
+  text-decoration: none;
   
 }
+.visually-hidden{
 
+color:#000;
+
+}
 
 /* ------------------ Sección Conócenos ------------------ */
 #conocenos {
@@ -249,7 +258,7 @@ body {
   align-items: center;
 }
 #CaruselConocenos .carousel-indicators [data-bs-target] {
-  background-color: #0026ff;
+  background-color: #0004d4;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -258,7 +267,7 @@ body {
 }
 
 .carousel-indicators .active {
-  background-color: #ffffff;
+  background-color: black;
   opacity: 1;
 }
 
@@ -300,14 +309,14 @@ body {
 
 #ubicacion .boton-reserva {
   width: 100%;
-  background-color: #ffd900;
-  color: white;
+  background-color: #FFDA0A;
+  color: #000000;
   border-radius: 0;
   justify-content: center;
 }
 
 #ubicacion .boton-reserva:hover {
-  background-color: #ffee53;
+  background-color: rgb(232, 216, 78);
 }
 
 .Guia {
@@ -474,7 +483,7 @@ body {
 }
 
 .boton-enviar {
-  background-color: red;
+  background-color:#0004d4;
   color: white;
 
   border-radius: 5px;
@@ -489,7 +498,7 @@ body {
   align-self: center;
 }
 .boton-enviar:hover {
-  background-color: rgb(223, 3, 3);
+  background-color: #0003aa;
   transform: scale(1.05);
 }
 
@@ -532,4 +541,18 @@ body {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   align-items: center;
+}
+span[aria-hidden="true"] {
+  color: #333; /* gris oscuro */
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
