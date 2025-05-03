@@ -264,9 +264,9 @@ main {
 
 .contenedor-Tarjetas {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* SOLO 2 columnas */
+    grid-template-columns: repeat(1, 1fr); /* SOLO 2 columnas */
     gap: 20px; /* Espacio entre las tarjetas */
-    padding: 40px;
+    padding: 10px;
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -280,7 +280,7 @@ main {
     border-radius: 16px; /* Bordes redondeados más suaves */
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Asegura que el contenido esté en columna */
     align-items: center; /* Centra horizontalmente todo el contenido */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -297,6 +297,55 @@ main {
     width: 75%;
     height: auto;
     border-radius: 12px;
+  }
+  #carouselExampleIndicators{
+    display: block;
+    margin: 15px auto;
+    width: 75%;
+    height: auto;
+    border-radius: 12px;
+
+  }
+  .carousel-inner {
+    height: 60vh; /* Ajusta la altura del carrusel como necesites */
+  }
+  
+  .carousel-inner img {
+    height:  60vh;
+    object-fit: cover; /* Recorta la imagen si es más grande, sin deformarla */
+    overflow: scroll;
+  }
+  #carouselExampleIndicators2{
+    display: block;
+    margin: 15px auto;
+    width: 75%;
+    height: auto;
+    border-radius: 12px;
+  }
+  #carouselExampleIndicators3 {
+    display: block;
+    margin: 15px auto;
+    width: 75%;
+    height: auto;
+    border-radius: 12px;
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: #0026ff;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+    margin: 0 4px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #2115ff;
+    opacity: 1;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    
+    background-color:rgb(0, 8, 255);
   }
   h3{
     font-family: "Jockey One", Helvetica;
@@ -354,7 +403,7 @@ main {
     border-radius: 8px;
     cursor: pointer;
   }
-  
+
   /*Boton de reserva*/
   .reservar {
     background-color: #B30000;
@@ -364,14 +413,6 @@ main {
     padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
-  }
-  @media (max-width: 768px) {
-    .info{
-      font-size: 10px;
-    }
-    .reservar{
-      font-size: 15px;
-    }
   }
 
   .contacto {

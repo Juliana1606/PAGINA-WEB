@@ -17,6 +17,7 @@
     <!-- jQuery y Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
     
 
     <link rel="stylesheet" href="styles_Main.css">
@@ -42,10 +43,10 @@
             
           <div class="Texto-Menu">INICIO</div>
           <a class="Texto-Menu" href="Vuelos.html">VUELOS RECREATIVOS</a>
-          <div class="Texto-Menu">AERONAVES</div>
-          <div class="Texto-Menu">¿QUIENES SOMOS?</div>
+          <a class="Texto-Menu" href="Aeronaves.html">AERONAVES</a>
+          <a class="Texto-Menu" href="QuienesSomos.html">¿QUIENES SOMOS?</a>
           <a class="Texto-Menu" href="Escuela.html">ESCUELA</a>
-          <div class="Texto-Menu">EVENTOS</div>
+          <a class="Texto-Menu" href="Eventos.html">EVENTOS</a>
       
           <a href="#seccionContacto" class="boton-contactanos">
             <span class="Texto-contacto">CONTACTANOS</span>
@@ -69,16 +70,26 @@
               <!-- Slides -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <video autoplay muted loop playsinline class="d-block w-100">
-                    <source src="Carusel_videos/VOLANDO RECORTADO.mp4" type="video/mp4">
-                  </video>
+                 
+                    <iframe 
+                      src="https://player.vimeo.com/video/1081155284?h=62ca4a00a7&autoplay=1&muted=1&background=1" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"  
+                      title="VOLANDO RECORTADO">
+                    </iframe>
+                  
                   <p class="sr-only">Experimenta la emoción de volar sobre Melgar</p>
                 </div>
           
                 <div class="carousel-item">
-                  <video autoplay muted loop playsinline class="d-block w-100">
-                    <source src="Carusel_videos/Video_Avion2.mp4" type="video/mp4">
-                  </video>
+                  <div>
+                    <iframe 
+                      src="https://player.vimeo.com/video/1081156405?h=004b648dac&autoplay=1&muted=1&background=1" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                      title="Avion_Editado_1">
+                    </iframe>
+                  </div>
                   <p class="sr-only">Disfruta de una vista impresionante desde las alturas</p>
                 </div>
           
@@ -112,7 +123,11 @@
             <div id="conocenos" class="about">
                 <div class="about-content">
                     <h2>CONÓCENOS</h2>
-                    <p>Hola, introducción corta sobre la empresa y nuestras experiencias aéreas.</p>
+                    <p>En el Club Colombiano de Aviación Deportiva, compartimos una pasión: <strong>volar</strong>. Somos una entidad sin ánimo de lucro
+                       dedicada a promover la aviación deportiva y recreativa en Colombia, especializada en vuelos con aeronaves ultralivianas.
+                        Ofrecemos una experiencia aérea única, segura y emocionante tanto para pilotos en formación como para quienes sueñan con
+                         volar por primera vez. Nos impulsa el deseo de enseñar, inspirar y acercar a más personas al maravilloso mundo de la
+                          aviación."</p>
                 </div>
 
                 <div id="carouselConocenos" class="carousel slide" data-ride="carousel">
@@ -152,8 +167,19 @@
                 <div class="info">
                     <h2>UBICACIÓN</h2>
                     <p><strong>¿Cómo llegar?</strong></p>
-                    <p>Estamos ubicados en un punto estratégico para ofrecerte la mejor experiencia aérea.</p>
+                    <p>Nos encontramos en en el municipio de Flandes, a 7 km del casco urbano, un lugar central, accesible desde Girardot, Ricaurte, Flandes y Melgar, a tan solo unos minutos en auto o bus.</p>
+                    <p>Nuestras instalaciones son ideales para planes familiares y de amigos, ofreciendo una vista panorámica de 360 grados para disfrutar del sobrevuelo de las naves en Aerosport</p>
+                    <p>Contamos con instalaciones adecuadas para cada ocasión, tales como:</p>
+                        <ul>
+                            <li>Salón comunal</li>
+                            <li>Servicio de onces</li>
+                            <li>Baños</li>
+                            <li>Torre de control</li>
+                            <li>Hangar</li>
+                            <li>Hermosa vista de las montañas del Tolima</li>
+                        </ul>
                 </div>
+                
                 <div id="carouselUbicacion" class="carousel slide" data-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselUbicacion" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

@@ -151,6 +151,7 @@ body {
     justify-content: center;
   }
 }
+
 .breadcrumb a {
     color: #333;
     text-decoration: none;
@@ -176,11 +177,12 @@ body {
   
   .hero-text {
     position: absolute;
+    font-family: 'Jockey One', sans-serif;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: #0022ff;
   }
   
   .hero-text h1 {
@@ -190,10 +192,24 @@ body {
     margin-bottom: 0.5rem;
   }
   
-  .hero-text p {
+  .hero-text h2 {
     font-size: 2.1rem;
   }
-  
+  @media(max-width: 768px) {
+    .hero-text h1 {
+      font-size: 3.5rem;
+      
+    }
+    
+    .hero-text p {
+      font-size: 1.5rem;
+    }
+  }
+ .row h2{
+    font-size: 4.5rem;
+    font-weight: bold;
+    font-family: 'Arial';
+ }
   .escuela-info-section {
     background-color: #f8f9fa;
     padding: 30px 0;
@@ -210,11 +226,16 @@ body {
   .escuela-descripcion {
     background-color: #5c5c5c;
     color: white;
-    font-family: "Jockey One-Regular", Helvetica;
     padding: 30px 20px;
     text-align: center;
+    
   }
-  
+
+  .escuela-descripcion p{
+
+    font-family: 'Jokey One', sans-serif,Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+  }
   .escuela-stats-section {
     background-color: red;
     color: white;
@@ -225,10 +246,27 @@ body {
     text-align: center;
     font-weight: bold;
   }
-  
+  .escuela-stats-section .col h2{
+    font-size: 2.0rem;
+    font-family: 'Arial';
+    font-weight: bold;
+    
+  }
+  .escuela-stats-section .col h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Jokey One', sans-serif,Arial, Helvetica, sans-serif;
+  }
   .col-md-6 img {
     width: 70%;
     height: auto;
+  }
+  .col-md-6 p {
+    font-family: 'Jokey One', sans-serif,Arial, Helvetica, sans-serif;
+  }
+  .col-md-6 ul {
+    font-family: 'Jokey One', sans-serif,Arial, Helvetica, sans-serif;
+    
   }
   
   .curso-header {
@@ -238,6 +276,8 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    font-family: 'Jokey One', sans-serif,Arial, Helvetica, sans-serif;
+    
   }
   
   .curso-detalle {
@@ -264,6 +304,7 @@ body {
   .curso-requisitos ul {
     list-style: disc;
     padding-left: 20px;
+    font-family: 'Jokey One', sans-serif,Arial, Helvetica, sans-serif;
   }
   
   /* Estilo para ítems con check */
@@ -286,7 +327,6 @@ body {
   h4.fw-bold {
     font-size: 1.3rem;
     margin-bottom: 0.75rem;
-    font-family: "Jokey One-Regular", Helvetica;
   }
   
   /* Espaciado entre columnas de teoría */
@@ -335,13 +375,14 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
     color: #444;
+    font-family: 'Jokey One', sans-serif,Arial, Helvetica, sans-serif;
   }
   
   /* ------------------ Sección Contacto ------------------ */
 .contacto {
     padding: 40px 20px;
     width: 100%;
-    font-family: 'Jockey One', sans-serif;
+
     text-align: center;
     margin-top: 40px;
   }
@@ -409,7 +450,7 @@ body {
     border: none;
     background-color: #e0e0e0;
     border-radius: 5px;
-    font-family: 'Jockey One', sans-serif;
+    
     margin-bottom: 10px;
     padding: 10px;
     font-size: 14px;
@@ -462,7 +503,7 @@ body {
     color: white;
     padding: 1rem 2rem;
     margin-top: 2rem;
-    font-family: 'Jockey One', sans-serif;
+   
     border-top: 3px solid #0070ff;
     display: flex;
     justify-content: space-between;
