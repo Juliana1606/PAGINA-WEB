@@ -1,0 +1,606 @@
+/* Fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+/* Reset y globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jockey One', sans-serif;
+}
+
+/* ------------------ Encabezado ------------------ */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  background-color: #001dff;
+  height: 20vh;
+}
+
+.LOGO-AEROSPOR {
+  width: 150px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+.nav .Texto-Menu {
+  text-decoration: none;
+  color: white
+  
+}
+.Texto-Menu {
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 15px;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Texto-Menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e7e7e7;
+  transition: width 0.3s ease;
+  text-decoration: none;
+}
+
+.Texto-Menu:hover::after {
+  width: 100%;
+  text-decoration: none;
+}
+
+.boton-contactanos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  border-radius: 37px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.boton-contactanos:hover {
+  background-color: #c0bebe;
+  transform: scale(1.05);
+  color: #000;
+  text-decoration: none;
+}
+
+/* ------------------ Menú Hamburguesa ------------------ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+/*------------------- main general----------------------------*/
+.compra-container {
+  max-width: 2000px;  
+  width: 95%;         
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Jockey One', sans-serif;
+}
+.breadcrumb {
+  background-color: #f2f2f2;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: fit-content;
+  margin: 0 auto 20px auto;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #333;
+}
+
+.link-inicio {
+  color: #888;
+  font-weight: bold;
+}
+
+.separador {
+  color: #888;
+}
+
+.activo {
+  color: black;
+  font-weight: bold;
+}
+.titulo-compra {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #005eff;
+  display: block; 
+  padding-bottom: 10px;
+}
+.compra-grid {
+  background-color: #d4d4d4;     /* Color más oscuro que el anterior */
+  border-radius: 15px;           
+  padding: 30px;
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Opcional para profundidad */
+}
+
+.datos-usuario, .resumen-vuelo {
+  flex: 1 1 45%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.datos-usuario input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #dcdcdc;
+  border: none;
+}
+/* Color azul para títulos y etiquetas */
+.titulo-datos h3,
+label {
+  color: #003cff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Contenedor título + icono */
+.titulo-datos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Tamaño del icono */
+.titulo-datos img {
+  width: 24px;
+  height: 24px;
+}
+.horas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.horas button,
+.guardar-hora {
+  background-color: #005eff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reserva-vuelo {
+  font-family: 'Jockey One', sans-serif;
+  margin-top: 30px;
+}
+
+.bloque-fecha,
+.bloque-hora {
+  margin-bottom: 20px;
+}
+
+.bloque-fecha label,
+.bloque-hora label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.bloque-fecha label img,
+.bloque-hora label img {
+  width: 40px; 
+  height: auto;
+}
+
+.bloque-fecha input[type="date"] {
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.seleccion-horas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.hora-btn {
+  background-color: #d9d9d9;
+  border: 2px solid #87b3ff;
+  color: #005eff;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.hora-btn:hover,
+.hora-btn.activa {
+  background-color: #005eff;
+  color: white;
+}
+
+.guardar-hora {
+  background-color: #2e6cd9;   
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;              
+  transition: background-color 0.3s ease;
+}
+
+.guardar-hora:hover {
+  background-color: #005eff;   
+}
+.card-vuelo {
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-vuelo img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+  background: yellow;
+  display: inline-block;
+  padding: 5px 10px;
+  color: black;
+}
+
+.metodo-pago {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.metodo-pago h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metodo-pago h4 img {
+  width: 25px;
+}
+
+.opcion-pago {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.opcion-pago input[type="radio"] {
+  margin-right: 10px;
+}
+
+.opcion-pago span {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.opcion-pago img {
+  height: 25px;
+  object-fit: contain;
+  margin-left: 8px;
+}
+.opcion-pago img[alt="PSE"]{
+  height: 50px;
+}
+.opcion-pago img[alt="Nequi"]{
+  height: 50px;
+}
+.opcion-pago img[alt="Daviplata"] {
+  height: 50px;
+}
+.botones-compra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cancelar {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.pagar {
+  background-color: #005eff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+}
+/* ------------------ Responsivo Encabezado ------------------ */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    
+    flex-direction: column;
+    align-items: center;
+    background-color: #001dff;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px 0;
+    gap: 30px;
+    z-index: 1000;
+  }
+
+  .nav.show {
+    transform: translateY(0%);
+  }
+
+  .boton-contactanos {
+    width: 60%;
+    justify-content: center;
+  }
+}
+.contacto {
+  padding: 40px 20px;
+  width: 100%;
+  font-family: 'Jockey One', sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+.contacto h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid blue;
+  display: inline-block;
+}
+.contenedor-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 50px;
+  padding: 20px;
+  
+}
+.item-contacto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.item-contacto img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.info-contacto {
+  background-color: #e6e6e6;
+  text-align: left;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  width: 100%;
+}
+
+
+.info-contacto h3 {
+  color: #003cff;
+  margin-bottom: 20px;
+}
+.item-contacto p {
+  margin: 0;
+  font-size: 16px;
+}
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  width: 350px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 10px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  font-family: 'Jockey One', sans-serif;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.formulario-contacto textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.formulario-contacto label {
+  color: #003cff;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.terminos {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.boton-enviar {
+  background-color:#0004d4;
+  color: white;
+
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  align-self: center;
+}
+.boton-enviar:hover {
+  background-color: #0003aa;
+  transform: scale(1.05);
+}
+
+.footer-redes {
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-family: 'Jockey One', sans-serif;
+  border-top: 3px solid #0070ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.iconos-redes a img {
+  width: 30px;
+  margin-left: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.iconos-redes a img:hover {
+  transform: scale(1.1);
+}
+
+#map {
+  width: 100%;
+  height: 40vh;
+  grid-column: 1 / -1; /* Ocupa ambas columnas */
+  grid-row: 3;
+  padding: 20%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+span[aria-hidden="true"] {
+  color: #333; /* gris oscuro */
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

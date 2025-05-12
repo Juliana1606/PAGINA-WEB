@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS de Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <link rel="stylesheet" href="Carrito.css">
+    <script src="Carrito.js" defer></script>
+    
+    <title>Tours Aerosport</title>
+</head>
+<body>
+    <header class="head">
+        
+        <h1 class="sr-only">Tours Aerosport</h1>
+        <img class="LOGO-AEROSPOR" src="Sin_fondo.png" alt="Logo de Tours Aerosport" />
+      
+        <!-- Botón hamburguesa con animación -->
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menú">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      
+        <nav class="nav" id="mainNav">
+            
+          <a class="Texto-Menu" href="Main.html">INICIO</a>
+          <a class="Texto-Menu" href="Vuelos.html">VUELOS RECREATIVOS</a>
+          <div class="Texto-Menu">AERONAVES</div>
+          <div class="Texto-Menu">¿QUIENES SOMOS?</div>
+          <a class="Texto-Menu" href="Escuela.html">ESCUELA</a>
+          <a class="Texto-Menu" href="Eventos.html">EVENTOS</a>
+      
+          <a href="#seccionContacto" class="boton-contactanos">
+            <span class="Texto-contacto">CONTACTANOS</span>
+          </a>
+        </nav>
+      </header>
+    
+<main class="compra-container">
+    <div class="ubi_carro">
+  <span class="link-inicio">Inicio</span> <span class="separador">/</span> <span class="activo">Carrito de Compras</span>
+</div>
+<h2 class="titulo-compra">FINALIZAR COMPRA</h2>
+  <div class="compra-grid">
+    <section class="datos-usuario">
+
+     <div class="titulo-datos">
+        <img src="Arc_Carrito/Person.png" alt="Icono usuario">
+     <h3>Tus datos</h3>
+             <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono">
+
+        <label for="documento">Documento</label>
+        <input type="text" id="documento">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email">
+        </div>
+
+<div class="reserva-vuelo">
+
+  <div class="bloque-fecha">
+    <label for="fecha">
+      <img src="Arc_Carrito/Calendar.png" alt="Ícono calendario">
+      Fecha de vuelo
+    </label>
+    <input type="date" id="fecha" name="fecha">
+  </div>
+
+  <div class="bloque-hora">
+    <label>
+      <img src="Arc_Carrito/Delivery Time.png" alt="Ícono reloj">
+      Hora de vuelo
+    </label>
+    <div class="seleccion-horas">
+      <button type="button" class="hora-btn">10:00 AM</button>
+      <button type="button" class="hora-btn">10:30 AM</button>
+      <button type="button" class="hora-btn">11:00 AM</button>
+      <button type="button" class="hora-btn">11:30 AM</button>
+      <button type="button" class="hora-btn">12:00 PM</button>
+      <button type="button" class="hora-btn">12:30 PM</button>
+      <button type="button" class="hora-btn">01:00 PM</button>
+      <button type="button" class="hora-btn">01:30 PM</button>
+      <button type="button" class="hora-btn">02:00 PM</button>
+      <button type="button" class="hora-btn">02:30 PM</button>
+      <button type="button" class="hora-btn">03:00 PM</button>
+      <button type="button" class="hora-btn">03:30 PM</button>
+      <button type="button" class="hora-btn">04:00 PM</button>
+      <button type="button" class="hora-btn">04:30 PM</button>
+      <button type="button" class="hora-btn">05:00 PM</button>
+    </div>
+    <button class="guardar-hora">GUARDAR</button>
+  </div>
+</div>
+    </section>
+
+ 
+    <section class="resumen-vuelo">
+      <div class="card-vuelo">
+        <img src="img_vuelos/vuelo1.jpeg" alt="Vuelo personal">
+        <p><strong>VUELO PERSONAL</strong></p>
+        <p>📅 30/01/2024 &nbsp; 🕒 10:00 AM</p>
+        <p>👤 1 Pasajero</p>
+        <p class="precio">150.000 COP</p>
+      </div>
+
+<div class="metodo-pago">
+  <h4><img src="Arc_Carrito/Magnetic Card.png" alt="icono"> Selecciona un <br> método de pago</h4>
+
+  <label class="opcion-pago">
+    <input type="radio" name="metodo" value="tarjeta">
+    <span>Tarjeta</span>
+    <img src="Arc_Carrito/VISA.png" alt="Tarjetas">
+    <img src="Arc_Carrito/MasterCard.png" alt="Tarjetas">
+    <img src="Arc_Carrito/Maestro.png" alt="Tarjetas">
+  </label>
+
+  <label class="opcion-pago">
+    <input type="radio" name="metodo" value="pse">
+    <span>PSE</span>
+    <img src="Arc_Carrito/pse.png" alt="PSE y Google Pay">
+    <img src="Arc_Carrito/Gplay.png" alt="PSE y Google Pay">
+  </label>
+
+  <label class="opcion-pago">
+    <input type="radio" name="metodo" value="nequi">
+    <span>Nequi</span>
+    <img src="Arc_Carrito/Nequi.png" alt="Nequi">
+  </label>
+
+  <label class="opcion-pago">
+    <input type="radio" name="metodo" value="daviplata">
+    <span>Daviplata</span>
+    <img src="Arc_Carrito/DAVIplata.png" alt="Daviplata">
+  </label>
+</div>
+
+      <div class="total">
+        <p>Total del vuelo: 150.000</p>
+        <p>Descuento: 0</p>
+        <p><strong>Total: 150.000</strong></p>
+      </div>
+
+      <div class="botones-compra">
+        <button class="cancelar">CANCELAR</button>
+        <button class="pagar">PAGAR AHORA</button>
+      </div>
+    </section>
+  </div>
+</main>
+    <footer>
+        <div class="contacto" id="seccionContacto">
+            <h2>Contáctanos</h2>
+            <div class="contenedor-contacto">
+              
+              <div class="info-contacto">
+                <h3>Nos encuentras aquí</h3>
+                <div class="item-contacto">
+                    <img src="img_vuelos/Google Maps.svg" alt="Se muestra un item de mapa">
+                    <p>Pista Aerosport: Vía Flandes-Melgar Kilómetro ___ Vereda ___</p>
+                  </div>
+          
+                  <div class="item-contacto">
+                    <img src="img_vuelos/Vector.svg" alt="Se muestra un icono de un vector">
+                    <p>Sede administrativa: Melgar, Tolima</p>
+                  </div>
+          
+                  <div class="item-contacto">
+                    <img src="img_vuelos/Phone.svg" alt="Se muestra un icono de celular">
+                    <p>3120000000</p>
+                  </div>
+          
+                  <div class="item-contacto">
+                    <img src="img_vuelos/Phone.svg" alt="Se muestra un icono de computador">
+                    <p>3200000000</p>
+                  </div>
+          
+                  <div class="item-contacto">
+                    <img src="img_vuelos/WhatsApp.svg" alt="Se muestra un icono de whatsapp">
+                    <p>(+57) 3124640271</p>
+                  </div>
+          
+                  <div class="item-contacto">
+                    <img src="img_vuelos/Letter.svg" alt="Se muestra un icono de carta">
+                    <p>toursaerosport@gmail.com</p>
+                  </div>
+              </div>
+          
+              <form class="formulario-contacto">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" required />
+          
+                <label for="email">Email</label>
+                <input id="email" type="email" required />
+          
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" type="tel" required />
+          
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" required></textarea>
+          
+                <label class="terminos">
+                  <input type="checkbox" required />
+                  Autorizo términos y condiciones
+                </label>
+          
+                <button type="submit" class="boton-enviar">ENVIAR</button>
+              </form>
+          
+            </div>
+        </div>   
+        <div class="footer-redes">
+            <h2 class="footer-titulo">Tours Aereosport S.A.S</h2>
+            <div class="iconos-redes">
+              <a href="#"><img src="img_vuelos/instagram.png" alt="Red social Instagram" /></a>
+              <a href="#"><img src="img_vuelos/facebook.png" alt="Red social Facebook" /></a>
+              <a href="#"><img src="img_vuelos/tw.png" alt="Red social Twitter/X" /></a>
+            </div>
+          </div>
+    
+    </footer>
+
+</body>
+</html>
