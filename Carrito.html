@@ -53,67 +53,69 @@
       </header>
     
 <main class="compra-container">
-    <div class="ubi_carro">
-  <span class="link-inicio">Inicio</span> <span class="separador">/</span> <span class="activo">Carrito de Compras</span>
-</div>
-<h2 class="titulo-compra">FINALIZAR COMPRA</h2>
+  <div class="breadcrumb">
+    <span class="link-inicio">Inicio</span> <span class="separador">/</span> <span class="activo">Carrito de Compras</span>
+  </div>
+
+  <h2 class="titulo-compra"><span>FINALIZAR COMPRA</span></h2>
+
   <div class="compra-grid">
+    <!-- Columna izquierda -->
     <section class="datos-usuario">
-
-     <div class="titulo-datos">
+      <div class="titulo-datos">
         <img src="Arc_Carrito/Person.png" alt="Icono usuario">
-     <h3>Tus datos</h3>
-             <label for="nombre">Nombre</label>
-        <input type="text" id="nombre">
+        <h3>Tus datos</h3>
+      </div>
 
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre">
 
-        <label for="documento">Documento</label>
-        <input type="text" id="documento">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono">
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email">
+      <label for="documento">Documento</label>
+      <input type="text" id="documento">
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email">
+
+      <div class="reserva-vuelo">
+        <div class="bloque-fecha">
+          <label for="fecha">
+            <img src="Arc_Carrito/Calendar.png" alt="Ícono calendario">
+            Fecha de vuelo
+          </label>
+          <input type="date" id="fecha" name="fecha">
         </div>
 
-<div class="reserva-vuelo">
-
-  <div class="bloque-fecha">
-    <label for="fecha">
-      <img src="Arc_Carrito/Calendar.png" alt="Ícono calendario">
-      Fecha de vuelo
-    </label>
-    <input type="date" id="fecha" name="fecha">
-  </div>
-
-  <div class="bloque-hora">
-    <label>
-      <img src="Arc_Carrito/Delivery Time.png" alt="Ícono reloj">
-      Hora de vuelo
-    </label>
-    <div class="seleccion-horas">
-      <button type="button" class="hora-btn">10:00 AM</button>
-      <button type="button" class="hora-btn">10:30 AM</button>
-      <button type="button" class="hora-btn">11:00 AM</button>
-      <button type="button" class="hora-btn">11:30 AM</button>
-      <button type="button" class="hora-btn">12:00 PM</button>
-      <button type="button" class="hora-btn">12:30 PM</button>
-      <button type="button" class="hora-btn">01:00 PM</button>
-      <button type="button" class="hora-btn">01:30 PM</button>
-      <button type="button" class="hora-btn">02:00 PM</button>
-      <button type="button" class="hora-btn">02:30 PM</button>
-      <button type="button" class="hora-btn">03:00 PM</button>
-      <button type="button" class="hora-btn">03:30 PM</button>
-      <button type="button" class="hora-btn">04:00 PM</button>
-      <button type="button" class="hora-btn">04:30 PM</button>
-      <button type="button" class="hora-btn">05:00 PM</button>
-    </div>
-    <button class="guardar-hora">GUARDAR</button>
-  </div>
-</div>
+        <div class="bloque-hora">
+          <label>
+            <img src="Arc_Carrito/Delivery Time.png" alt="Ícono reloj">
+            Hora de vuelo
+          </label>
+          <div class="seleccion-horas">
+            <button type="button" class="hora-btn">10:00 AM</button>
+            <button type="button" class="hora-btn">10:30 AM</button>
+            <button type="button" class="hora-btn">11:00 AM</button>
+            <button type="button" class="hora-btn">11:30 AM</button>
+            <button type="button" class="hora-btn">12:00 PM</button>
+            <button type="button" class="hora-btn">12:30 PM</button>
+            <button type="button" class="hora-btn">01:00 PM</button>
+            <button type="button" class="hora-btn">01:30 PM</button>
+            <button type="button" class="hora-btn">02:00 PM</button>
+            <button type="button" class="hora-btn">02:30 PM</button>
+            <button type="button" class="hora-btn">03:00 PM</button>
+            <button type="button" class="hora-btn">03:30 PM</button>
+            <button type="button" class="hora-btn">04:00 PM</button>
+            <button type="button" class="hora-btn">04:30 PM</button>
+            <button type="button" class="hora-btn">05:00 PM</button>
+          </div>
+          <button class="guardar-hora">GUARDAR</button>
+        </div>
+      </div>
     </section>
 
- 
+    <!-- Columna derecha -->
     <section class="resumen-vuelo">
       <div class="card-vuelo">
         <img src="img_vuelos/vuelo1.jpeg" alt="Vuelo personal">
@@ -123,42 +125,47 @@
         <p class="precio">150.000 COP</p>
       </div>
 
-<div class="metodo-pago">
-  <h4><img src="Arc_Carrito/Magnetic Card.png" alt="icono"> Selecciona un <br> método de pago</h4>
+      <div class="metodo-pago">
+        <h4><img src="Arc_Carrito/Magnetic Card.png" alt="icono"> Selecciona un <br> método de pago</h4>
 
-  <label class="opcion-pago">
-    <input type="radio" name="metodo" value="tarjeta">
-    <span>Tarjeta</span>
-    <img src="Arc_Carrito/VISA.png" alt="Tarjetas">
-    <img src="Arc_Carrito/MasterCard.png" alt="Tarjetas">
-    <img src="Arc_Carrito/Maestro.png" alt="Tarjetas">
-  </label>
+        <label class="opcion-pago">
+          <input type="radio" name="metodo" value="tarjeta">
+          <span class="pago-label">Tarjeta</span>
+          <img src="Arc_Carrito/VISA.png" alt="VISA">
+          <img src="Arc_Carrito/MasterCard.png" alt="MasterCard">
+          <img src="Arc_Carrito/Maestro.png" alt="Maestro">
+        </label>
 
-  <label class="opcion-pago">
-    <input type="radio" name="metodo" value="pse">
-    <span>PSE</span>
-    <img src="Arc_Carrito/pse.png" alt="PSE y Google Pay">
-    <img src="Arc_Carrito/Gplay.png" alt="PSE y Google Pay">
-  </label>
+        <label class="opcion-pago">
+          <input type="radio" name="metodo" value="pse">
+          <span class="pago-label">PSE</span>
+          <img src="Arc_Carrito/pse.png" alt="PSE">
+          <img src="Arc_Carrito/Gplay.png" alt="Google Pay">
+        </label>
 
-  <label class="opcion-pago">
-    <input type="radio" name="metodo" value="nequi">
-    <span>Nequi</span>
-    <img src="Arc_Carrito/Nequi.png" alt="Nequi">
-  </label>
+        <label class="opcion-pago">
+          <input type="radio" name="metodo" value="nequi">
+          <span class="pago-label">Nequi</span>
+          <img src="Arc_Carrito/Nequi.png" alt="Nequi">
+        </label>
 
-  <label class="opcion-pago">
-    <input type="radio" name="metodo" value="daviplata">
-    <span>Daviplata</span>
-    <img src="Arc_Carrito/DAVIplata.png" alt="Daviplata">
-  </label>
-</div>
+        <label class="opcion-pago">
+          <input type="radio" name="metodo" value="daviplata">
+          <span class="pago-label">Daviplata</span>
+          <img src="Arc_Carrito/DAVIplata.png" alt="Daviplata">
+        </label>
+      </div>
 
       <div class="total">
-        <p>Total del vuelo: 150.000</p>
-        <p>Descuento: 0</p>
+        <p>Total del vuelo: <strong>150.000</strong></p>
+        <p>Descuento: <span style="color:red;">0</span></p>
+        <hr>
         <p><strong>Total: 150.000</strong></p>
       </div>
+
+      <p class="legal-text">
+        Al pagar aceptas nuestros <a href="#">Términos y condiciones</a>, autorizas el tratamiento de tus datos personales de acuerdo con la <a href="#">Política de privacidad</a>.
+      </p>
 
       <div class="botones-compra">
         <button class="cancelar">CANCELAR</button>
@@ -167,6 +174,7 @@
     </section>
   </div>
 </main>
+
     <footer>
         <div class="contacto" id="seccionContacto">
             <h2>Contáctanos</h2>

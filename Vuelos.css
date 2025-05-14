@@ -382,22 +382,6 @@ main {
     margin-top: 40px;
   }
   
-  a.reservar {
-    text-decoration: none; /* Quita el subrayado */
-
-    background-color: #B30000; /* Color de fondo (puedes cambiarlo) */
-    padding: 10px 20px; 
-    
-    display: inline-block;
-   
-    
-  }
-  
-  a.reservar:hover {
-    text-decoration: none;
-    background-color:#a70101; /* Color al pasar el mouse */
-    color: white; /* Asegúrate que el color no cambie */
-  }
   .contacto h2 {
     font-size: 28px;
     margin-bottom: 20px;

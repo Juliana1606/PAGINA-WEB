@@ -129,15 +129,11 @@ body {
 }
 .breadcrumb {
   background-color: #f2f2f2;
-  padding: 10px 20px;
-  border-radius: 15px;
+  padding: 8px 16px;
+  border-radius: 10px;
   width: fit-content;
-  margin: 0 auto 20px auto;
-  font-family: 'Jockey One', sans-serif;
-  font-size: 16px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
   color: #333;
 }
 
@@ -156,23 +152,24 @@ body {
 }
 .titulo-compra {
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  color: black;
   margin-bottom: 30px;
+}
+
+.titulo-compra span {
   border-bottom: 3px solid #005eff;
-  display: block; 
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .compra-grid {
-  background-color: #d4d4d4;     /* Color más oscuro que el anterior */
+  background-color: #d4d4d4;     
   border-radius: 15px;           
   padding: 30px;
   gap: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Opcional para profundidad */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .datos-usuario, .resumen-vuelo {
@@ -190,7 +187,7 @@ body {
   background: #dcdcdc;
   border: none;
 }
-/* Color azul para títulos y etiquetas */
+
 .titulo-datos h3,
 label {
   color: #003cff;
@@ -199,7 +196,7 @@ label {
   display: block;
 }
 
-/* Contenedor título + icono */
+
 .titulo-datos {
   display: flex;
   align-items: center;
@@ -207,7 +204,6 @@ label {
   margin-bottom: 15px;
 }
 
-/* Tamaño del icono */
 .titulo-datos img {
   width: 24px;
   height: 24px;
@@ -346,6 +342,7 @@ label {
 }
 
 .opcion-pago {
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
