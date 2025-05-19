@@ -216,9 +216,12 @@
                     </a>
                 </div>
              <div class="Guia">
+              <a href="https://wa.me/573124640271?text=Hola,%20qusiera%20saber%20más%20información%20para%20agendar%20mi%20vuelo" target="_blank">
                 <button class="boton-reserva">
-                    <i class="fab fa-whatsapp"></i> ¿Dudas? Nosotros te guiamos
-                </button>
+                  <i class="fab fa-whatsapp"></i> ¿Dudas? Nosotros te guiamos
+              </button>
+              </a>
+                
              </div>
              <div id="map" >
                 <a href="#map">Ver ubicación</a>
@@ -317,24 +320,24 @@
                   </div>
               </div>
           
-              <form class="formulario-contacto">
+              <form class="formulario-contacto" action="enviar_Formulario.php" method="POST">
                 <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" required />
-          
+                <input id="nombre" type="text" name="nombre" required />
+                
                 <label for="email">Email</label>
-                <input id="email" type="email" required />
-          
+                <input id="email" type="email" name="email" required />
+                
                 <label for="telefono">Teléfono</label>
-                <input id="telefono" type="tel" required />
-          
+                <input id="telefono" type="tel" name="telefono" required />
+                
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" required></textarea>
-          
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                
                 <label class="terminos">
-                  <input type="checkbox" required />
+                  <input type="checkbox" name="terminos" required />
                   Autorizo términos y condiciones
                 </label>
-          
+                
                 <button type="submit" class="boton-enviar">ENVIAR</button>
               </form>
           
