@@ -345,7 +345,7 @@ main {
   }
 
   /*Boton de mas informacion*/
-  button.info {
+  .info {
     background-color: #004cff;
     color: white;
     font-family: 'Jockey One', sans-serif;
@@ -357,7 +357,7 @@ main {
   
   /*Boton de reserva*/
   .reservar {
-    background-color: #B30000;
+    background-color: #d40404;
     color: white;
     font-family: 'Jockey One', sans-serif;
     border: none;
@@ -365,6 +365,30 @@ main {
     border-radius: 8px;
     cursor: pointer;
   }
+  .reservar:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+  }
+  .info:hover {
+    background-color: #0033ff;
+    transform: scale(1.05);
+  }
+
+  a.info {
+
+    text-decoration: none; /* Quitar subrayado */
+    color:white;
+    cursor: pointer;       /* Cambia el cursor a pointer para que siga pareciendo un enlace */
+  }
+  a.reservar {
+    text-decoration: none; /* Quitar subrayado */
+    color:white;
+    cursor: pointer;       /* Cambia el cursor a pointer para que siga pareciendo un enlace */
+  }
+
+
+ 
+  
   @media (max-width: 768px) {
     .info{
       font-size: 10px;

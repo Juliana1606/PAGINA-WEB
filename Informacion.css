@@ -360,7 +360,7 @@ a.Texto-Menu:hover {
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 30px;
     margin-top: 10px;
   }
   
@@ -391,7 +391,7 @@ a.Texto-Menu:hover {
   }
   
   .contenido-descripcion p {
-    font-size: 14px;
+    font-size: 18px;
     color: #222;
     text-align: justify;
     margin-bottom: 20px;

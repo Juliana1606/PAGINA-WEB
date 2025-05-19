@@ -37,10 +37,10 @@
     <nav class="nav" id="mainNav">
       <a class="Texto-Menu" href="Main.html">INICIO</a>
       <a class="Texto-Menu" href="Vuelos.html">VUELOS RECREATIVOS</a>
-      <div class="Texto-Menu">AERONAVES</div>
-      <div class="Texto-Menu">¿QUIENES SOMOS?</div>
-      <div class="Texto-Menu">ESCUELA</div>
-      <div class="Texto-Menu">EVENTOS</div>
+      <a class="Texto-Menu" href="Aeronaves.html">AERONAVES</a>
+      <a class="Texto-Menu" href="QuienesSomos.html">¿QUIENES SOMOS?</a>
+      <a class="Texto-Menu" href="Escuela.html">ESCUELA</a>
+      <a class="Texto-Menu" href="Eventos.html">EVENTOS</a>
   
       <a class="boton-contactanos" href="#formulario-contacto">
         <span class="Texto-contacto">CONTACTANOS</span>
@@ -55,124 +55,85 @@
           <li class="breadcrumb-item active" aria-current="page">Informacion</li>
         </ol>
       </nav>
-      <!--
-        <section class="video-section">
-          <div id="carouselinfo" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselinfo" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselinfo" data-slide-to="1"></li>
-                <li data-target="#carouselinfo" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <video class="d-block w-100">
-                        <source src="Carusel_videos/VOLANDO RECORTADO.mp4" type="video/mp4">
-                    </video>
-                    <p class="sr-only">Experimenta la emoción de volar sobre Melgar</p>
-                </div>
-                <div class="carousel-item">
-                    <video class="d-block w-100" autoplay muted loop playsinline>
-                        <source src="Carusel_videos/Video_Avion2.mp4" type="video/mp4">
-                    </video>
-                    <p class="sr-only">Disfruta de una vista impresionante desde las alturas</p>
-                </div>
-                <div class="carousel-item">
-                    <video class="d-block w-100" autoplay muted loop playsinline>
-                        <source src="Carusel_videos/Video_Avion3.mp4" type="video/mp4">
-                    </video>
-                    <p class="sr-only">Vuela sobre paisajes inolvidables con nosotros</p>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselinfo" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselinfo" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            
-        </div>
-          </section>-->
+      
           
           <section class="info-servicio">
             <div class="item">
               <div class="icono">
-                <img src="Arc_Informacion/Delivery Time.svg" alt="Duración">
-              </div>
-              <h3>DURACIÓN</h3>
-              <p>15 minutos</p>
-            </div>
-          
-            <div class="item">
-              <div class="icono">
-                <img src="Arc_Informacion/People.png" alt="Pasajeros">
+                <img src="Arc_Informacion/Delivery Time.svg" alt="Pasajeros">
+               </div>
+             <h3>DURACIÓN</h3>
+             <p id="duracion"></p>
+           </div>
+
+             <div class="item">
+               <div class="icono">
+                 <img src="Arc_Informacion/People.png" alt="Pasajeros">
               </div>
               <h3>PASAJEROS</h3>
-              <p>Incluye 1 persona</p>
-            </div>
-          
-            <div class="item">
-              <div class="icono">
-                <img src="Arc_Informacion/Car.png" alt="Estacionamiento">
+                <p id="pasajeros"></p>
               </div>
-              <h3>ESTACIONAMIENTO</h3>
-              <h3>GRATIS</h3>
-            </div>
-          
+
+             <div class="item">
+                <div class="icono">
+                  <img src="Arc_Informacion/Car.png" alt="Estacionamiento">
+                </div>
+               <h3>ESTACIONAMIENTO</h3>
+                  <h3 id="estacionamiento"></h3>
+              </div>
+
             <div class="item">
               <div class="icono">
                 <img src="Arc_Informacion/Plane.png" alt="Recorrido">
               </div>
               <h3>RECORRIDO</h3>
-              <p>Vereda ____ Hasta la represa de Prado-Tolima</p>
+              <p id="recorrido"></p>
             </div>
-          
+
             <div class="item">
               <div class="icono">
                 <img src="Arc_Informacion/My Location.png" alt="Salida">
               </div>
               <h3>SALIDA</h3>
-              <p>Aerosport Cundinamarca</p>
+              <p id="salida"></p>
             </div>
-        </section>
-         <section class="detalle-servicio">
-                <div class="columna izquierda">
-                  <img src="Arc_Informacion/foto1 1.png" alt="Imagen del vuelo">
-                  <div class="precio">150.000 COP</div>
-                </div>
-                <div class="columna derecha">
-                  <div class="contenido-descripcion">
-                    <h3>DESCRIPCIÓN</h3>
-                    <p>Este es el texto descriptivo sobre la actividad. Puedes reemplazarlo con información real. Aquí puedes hablar de lo que incluye el vuelo, la experiencia, duración, etc.</p>
-              
-                    <h4>Itinerario</h4>
-                    <ul>
-                      <li>Punto de encuentro</li>
-                      <li>Vuelo panorámico</li>
-                      <li>Retorno y despedida</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-              
-              <!-- Botón de reserva -->
-              <div class="reserva-boton" id="Reservar">
+          </section>
 
-                <a href="Carrito.html" class="boton-reserva">RESERVA AHORA</a>
+          <section class="detalle-servicio">
+            <div class="columna izquierda">
+              <img id="imagen" src="" alt="Imagen del vuelo">
+              <div class="precio" id="precio"></div>
+            </div>
+            <div class="columna derecha">
+              <div class="contenido-descripcion">
+                <h3 id="titulo"></h3>
+                <p id="descripcion"></p>
+
+                <h4>Itinerario</h4>
+                <ul id="itinerario"></ul>
               </div>
-              <section class="mapa">
-                <h2 class="titulo-mapa"><span class="subrayado">ÁREA DE RECORRIDO</span></h2>
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8060.475334254938!2d-74.74818226863643!3d4.2521870927767536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1743928465642!5m2!1ses!2sco"
-                  width="100%" 
-                  height="400" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-              </section>
+            </div>
+          </section>
+
+        <!-- Botón de reserva -->
+        <div class="reserva-boton" id="Reservar">
+          <a href="Carrito.html" class="boton-reserva">COMPRAR AHORA</a>
+        </div>
+
+        <section class="mapa">
+          <h2 class="titulo-mapa"><span class="subrayado">ÁREA DE RECORRIDO</span></h2>
+          <iframe 
+            id="mapa"
+            src=""
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </section>
+
     </main>
     <footer>
         <div class="contacto" id="formulario-contacto"> 

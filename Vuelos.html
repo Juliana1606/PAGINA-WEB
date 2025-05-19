@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="Vuelos.css">
     <script src="Vuelos.js" defer></script>
+    <script src="cargarVuelos.js"></script>
     
     <title>Vuelos Tours Aerosport </title>
 </head>
@@ -59,103 +60,8 @@
           <span>RECREATIVOS</span>
         </h2>
       </div>
-    <main class="contenedor-Tarjetas">
-        <div class="Tarjeta">
-            <img src="img_vuelos/vuelo1.jpeg" alt="Imagen promocinal de vuelo personal">
-            <div class="contenido">
-              <h3>VUELO PERSONAL</h3>
-              <p class="detalles">
-                <span>👤 Incluye 1 persona </span>
-                <span> ⏱ 15 minutos</span>
-              </p>
-              <p class="precio-vuelo">150.000 COP</p>
-              <p class="descripcion">Descripción del vuelo</p>
-              <div class="botones">
-                <button class="info" onclick="window.open('Informacion.html')">¡Quiero más info!</button>
-                <a href="Carrito.html" class="reservar">¡Reservar ahora!</a>
-              </div>
-            </div>
-          </div>
-          <div class="Tarjeta">
-            <img src="img_vuelos/vuelo2.jpeg" alt="Imagen promocional de vuelo personal con variacion de tiempo">
-            <div class="contenido">
-              <h3>VUELO PERSONAL</h3>
-              <p class="detalles">
-                <span>👤 Incluye 1 persona </span>
-                <span> ⏱ 15 minutos</span>
-              </p>
-              <p class="precio-vuelo">150.000 COP</p>
-              <p class="descripcion">Descripción del vuelo</p>
-              <div class="botones">
-                <button class="info" onclick="window.open('Informacion.html')">¡Quiero más info!</button>
-                <a href="Carrito.html" class="reservar">¡Reservar ahora!</a>
-              </div>
-            </div>
-          </div>
-          <div class="Tarjeta">
-            <img src="img_vuelos/vuelo3.jpeg" alt="Imagen promocional con vuelo compaetido">
-            <div class="contenido">
-              <h3>VUELO PERSONAL</h3>
-              <p class="detalles">
-                <span>👤 Incluye 1 persona </span>
-                <span> ⏱ 15 minutos</span>
-              </p>
-              <p class="precio-vuelo">150.000 COP</p>
-              <p class="descripcion">Descripción del vuelo</p>
-              <div class="botones">
-                <button class="info" onclick="window.open('Informacion.html')">¡Quiero más info!</button>
-                <a href="Carrito.html" class="reservar">¡Reservar ahora!</a>
-              </div>
-            </div>
-          </div>
-          <div class="Tarjeta">
-            <img src="img_vuelos/vuelo4.jpeg" alt="Imagen promocional de vuelo compartido con variaciones de tiempo">
-            <div class="contenido">
-              <h3>VUELO PERSONAL</h3>
-              <p class="detalles">
-                <span>👤 Incluye 1 persona </span>
-                <span> ⏱ 15 minutos</span>
-              </p>
-              <p class="precio-vuelo">150.000 COP</p>
-              <p class="descripcion">Descripción del vuelo</p>
-              <div class="botones">
-                <button class="info" onclick="window.open('Informacion.html')">¡Quiero más info!</button>
-                <a href="Carrito.html" class="reservar">¡Reservar ahora!</a>
-              </div>
-            </div>
-          </div>
-          <div class="Tarjeta">
-            <img src="img_vuelos/vuelo1.jpeg" alt="Imagen de vuelo propocional con dedicatoria">
-            <div class="contenido">
-              <h3>VUELO PERSONAL</h3>
-              <p class="detalles">
-                <span>👤 Incluye 1 persona </span>
-                <span> ⏱ 15 minutos</span>
-              </p>
-              <p class="precio-vuelo">150.000 COP</p>
-              <p class="descripcion">Descripción del vuelo</p>
-              <div class="botones">
-                <button class="info" onclick="window.open('Informacion.html')">¡Quiero más info!</button>
-                <a href="Carrito.html" class="reservar">¡Reservar ahora!</a>
-              </div>
-            </div>
-          </div>
-          <div class="Tarjeta">
-            <img src="img_vuelos/vuelo2.jpeg" alt="Imagen de vuelo promocional con babyshower">
-            <div class="contenido">
-              <h3>VUELO PERSONAL</h3>
-              <p class="detalles">
-                <span>👤 Incluye 1 persona </span>
-                <span> ⏱ 15 minutos</span>
-              </p>
-              <p class="precio-vuelo">150.000 COP</p>
-              <p class="descripcion">Descripción del vuelo</p>
-              <div class="botones">
-                  <button class="info" onclick="window.open('Informacion.html')">¡Quiero más info!</button>
-                <a href="Carrito.html" class="reservar">¡Reservar ahora!</a>
-              </div>
-            </div>
-          </div>
+    <main class="contenedor-Tarjetas" id="contenedorTarjetas">
+        
     </main>
 <footer>
     <div class="contacto" id="formulario-contacto"> 
