@@ -34,6 +34,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startAutoSlide();
 });
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("http://localhost/PAGINA-WEB/obtener_caruseles.php")
+    .then(res => res.json())
+    .then(data => {
+      if (!data) return;
+
+      // Videos
+      const videos = [data.video1, data.video2, data.video3];
+      const videoContainer = document.getElementById("carousel-videos-inner");
+      videos.forEach((video, i) => {
+        videoContainer.innerHTML += `
+          <div class="carousel-item ${i === 0 ? "active" : ""}">
+            <video autoplay muted loop playsinline class="d-block w-100">
+              <source src="${video}" type="video/mp4">
+            </video>
+          </div>`;
+      });
+
+      // Aviones
+      const aviones = [data.imgAvion1, data.imgAvion2, data.imgAvion3, data.imgAvion4];
+      const avionContainer = document.getElementById("carousel-aviones-inner");
+      aviones.forEach((img, i) => {
+        avionContainer.innerHTML += `
+          <div class="carousel-item ${i === 0 ? "active" : ""}">
+            <img class="d-block w-100" src="${img}" alt="Imagen de avión ${i+1}">
+          </div>`;
+      });
+
+      // Lugares
+      const lugares = [data.imgLugar1, data.imgLugar2, data.imgLugar3, data.imgLugar4, data.imgLugar5, data.imgLugar6];
+      const lugarContainer = document.getElementById("carousel-lugares-inner");
+      lugares.forEach((img, i) => {
+        lugarContainer.innerHTML += `
+          <div class="carousel-item ${i === 0 ? "active" : ""}">
+            <img class="d-block w-100" src="${img}" alt="Imagen del lugar ${i+1}">
+          </div>`;
+      });
+    })
+    .catch(err => {
+      console.error("Error cargando datos del carrusel:", err);
+    });
+});
+
 /*<!-- Script para el mapa y el carrusel -->*/
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -125,4 +168,5 @@ function toggleMenu() {
       document.getElementById("seccionContacto").scrollIntoView({ behavior: "smooth" });
     });
   });
-  
+
+
