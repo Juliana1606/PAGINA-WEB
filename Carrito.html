@@ -41,8 +41,8 @@
             
           <a class="Texto-Menu" href="Main.html">INICIO</a>
           <a class="Texto-Menu" href="Vuelos.html">VUELOS RECREATIVOS</a>
-          <div class="Texto-Menu">AERONAVES</div>
-          <div class="Texto-Menu">¿QUIENES SOMOS?</div>
+          <a class="Texto-Menu" href="Aeronaves.html">AERONAVES</a>
+          <a class="Texto-Menu" href="QuienesSomos.html">¿QUIENES SOMOS?</a>
           <a class="Texto-Menu" href="Escuela.html">ESCUELA</a>
           <a class="Texto-Menu" href="Eventos.html">EVENTOS</a>
       
@@ -53,31 +53,47 @@
       </header>
     
 <main class="compra-container">
-  <div class="breadcrumb">
-    <span class="link-inicio">Inicio</span> <span class="separador">/</span> <span class="activo">Carrito de Compras</span>
-  </div>
+  <nav aria-label="breadcrumb" class="bg-light py-2 pl-3">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="Main.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="Vuelos.html">Vuelos Recreativos</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Finalizar Compra</li>
+        </ol>
+      </nav>
 
   <h2 class="titulo-compra"><span>FINALIZAR COMPRA</span></h2>
 
   <div class="compra-grid">
     <!-- Columna izquierda -->
     <section class="datos-usuario">
-      <div class="titulo-datos">
-        <img src="Arc_Carrito/Person.png" alt="Icono usuario">
-        <h3>Tus datos</h3>
-      </div>
+      <form aria-labelledby="titulo-datos">
+        <fieldset>
+          <legend id="titulo-datos">
+            <img src="Arc_Carrito/Person.png" alt="Icono usuario">
+            <span>Tus datos</span>
+          </legend>
 
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre">
+          <div class="campo-formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
 
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono">
+          <div class="campo-formulario">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono">
+          </div>
 
-      <label for="documento">Documento</label>
-      <input type="text" id="documento">
+          <div class="campo-formulario">
+            <label for="documento">Documento</label>
+            <input type="text" id="documento" name="documento">
+          </div>
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email">
+          <div class="campo-formulario">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+          </div>
+        </fieldset>
+      </form>
 
       <div class="reserva-vuelo">
         <div class="bloque-fecha">
@@ -89,10 +105,10 @@
         </div>
 
         <div class="bloque-hora">
-          <label>
+          <div class="etiqueta-hora">
             <img src="Arc_Carrito/Delivery Time.png" alt="Ícono reloj">
-            Hora de vuelo
-          </label>
+             <span id="hora-vuelo-label">Hora de vuelo</span>
+           </div>
           <div class="seleccion-horas">
             <button type="button" class="hora-btn">10:00 AM</button>
             <button type="button" class="hora-btn">10:30 AM</button>
@@ -118,47 +134,52 @@
     <!-- Columna derecha -->
     <section class="resumen-vuelo">
       <div class="card-vuelo">
-        <img src="img_vuelos/vuelo1.jpeg" alt="Vuelo personal">
+        <img src="img_vuelos/vuelo1.jpeg" alt="Imagen de vuelo en cabina">
         <p><strong>VUELO PERSONAL</strong></p>
         <p>📅 30/01/2024 &nbsp; 🕒 10:00 AM</p>
         <p>👤 1 Pasajero</p>
-        <p class="precio">150.000 COP</p>
+        <h3 class="precio">150.000 COP</h3>
       </div>
 
       <div class="metodo-pago">
-        <h4><img src="Arc_Carrito/Magnetic Card.png" alt="icono"> Selecciona un <br> método de pago</h4>
+  <fieldset class="grupo-metodo">
+    <legend>
+      <img src="Arc_Carrito/Magnetic Card.png" alt="icono">
+      Selecciona un <br> método de pago
+    </legend>
 
-        <label class="opcion-pago">
-          <input type="radio" name="metodo" value="tarjeta">
-          <span class="pago-label">Tarjeta</span>
-          <img src="Arc_Carrito/VISA.png" alt="VISA">
-          <img src="Arc_Carrito/MasterCard.png" alt="MasterCard">
-          <img src="Arc_Carrito/Maestro.png" alt="Maestro">
-        </label>
+    <label class="opcion-pago">
+      <input type="radio" name="metodo" value="tarjeta">
+      <span class="pago-label">Tarjeta</span>
+      <img src="Arc_Carrito/VISA.png" alt="VISA">
+      <img src="Arc_Carrito/MasterCard.png" alt="MasterCard">
+      <img src="Arc_Carrito/Maestro.png" alt="Maestro">
+    </label>
 
-        <label class="opcion-pago">
-          <input type="radio" name="metodo" value="pse">
-          <span class="pago-label">PSE</span>
-          <img src="Arc_Carrito/pse.png" alt="PSE">
-          <img src="Arc_Carrito/Gplay.png" alt="Google Pay">
-        </label>
+    <label class="opcion-pago">
+      <input type="radio" name="metodo" value="pse">
+      <span class="pago-label">PSE</span>
+      <img src="Arc_Carrito/pse.png" alt="Metodo de pago PSE">
+      <img src="Arc_Carrito/Gplay.png" alt="Google Pay">
+    </label>
 
-        <label class="opcion-pago">
-          <input type="radio" name="metodo" value="nequi">
-          <span class="pago-label">Nequi</span>
-          <img src="Arc_Carrito/Nequi.png" alt="Nequi">
-        </label>
+    <label class="opcion-pago">
+      <input type="radio" name="metodo" value="nequi">
+      <span class="pago-label">Nequi</span>
+      <img src="Arc_Carrito/Nequi.png" alt="Metodo de pago Nequi">
+    </label>
 
-        <label class="opcion-pago">
-          <input type="radio" name="metodo" value="daviplata">
-          <span class="pago-label">Daviplata</span>
-          <img src="Arc_Carrito/DAVIplata.png" alt="Daviplata">
-        </label>
-      </div>
+    <label class="opcion-pago">
+      <input type="radio" name="metodo" value="daviplata">
+      <span class="pago-label">Daviplata</span>
+      <img src="Arc_Carrito/DAVIplata.png" alt="Daviplata">
+    </label>
+  </fieldset>
+</div>
 
       <div class="total">
         <p>Total del vuelo: <strong>150.000</strong></p>
-        <p>Descuento: <span style="color:red;">0</span></p>
+        <p>Descuento: <span style="color:rgb(180, 0, 0);">0</span></p>
         <hr>
         <p><strong>Total: 150.000</strong></p>
       </div>
@@ -175,7 +196,7 @@
   </div>
 </main>
 
-    <footer>
+   <footer>
         <div class="contacto" id="seccionContacto">
             <h2>Contáctanos</h2>
             <div class="contenedor-contacto">
@@ -213,24 +234,24 @@
                   </div>
               </div>
           
-              <form class="formulario-contacto">
+              <form class="formulario-contacto" action="enviar_Formulario.php" method="POST">
                 <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" required />
-          
+                <input id="nombre" type="text" name="nombre" required />
+                
                 <label for="email">Email</label>
-                <input id="email" type="email" required />
-          
+                <input id="email" type="email" name="email" required />
+                
                 <label for="telefono">Teléfono</label>
-                <input id="telefono" type="tel" required />
-          
+                <input id="telefono" type="tel" name="telefono" required />
+                
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" required></textarea>
-          
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                
                 <label class="terminos">
-                  <input type="checkbox" required />
+                  <input type="checkbox" name="terminos" required />
                   Autorizo términos y condiciones
                 </label>
-          
+                
                 <button type="submit" class="boton-enviar">ENVIAR</button>
               </form>
           
@@ -246,6 +267,5 @@
           </div>
     
     </footer>
-
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* Fuente principal */
+/* Fuente principae */
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
 /* Reset y globales */
@@ -137,6 +137,15 @@ body {
   color: #333;
 }
 
+.breadcrumb a {
+  color: #101010;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #000;
+  text-decoration: underline;
+}
 .link-inicio {
   color: #888;
   font-weight: bold;
@@ -248,7 +257,11 @@ label {
   width: 40px; 
   height: auto;
 }
-
+#hora-vuelo-label{
+  font-family: 'Jockey One', sans-serif;
+  font-weight: bold;
+  color:#0004ff;
+}
 .bloque-fecha input[type="date"] {
   background-color: #e6e6e6;
   border: 1px solid #ccc;
@@ -267,9 +280,9 @@ label {
 }
 
 .hora-btn {
-  background-color: #d9d9d9;
-  border: 2px solid #87b3ff;
-  color: #005eff;
+  background-color: #ffffff;
+  border: 2px solid #1100cf;
+  color: #1100cf;
   font-weight: bold;
   border-radius: 10px;
   padding: 10px;
@@ -383,9 +396,9 @@ label {
 }
 
 .cancelar {
-  background-color: white;
-  color: red;
-  border: 2px solid red;
+  background-color: rgb(236, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(226, 0, 0);
   padding: 10px 20px;
   border-radius: 6px;
 }
@@ -396,6 +409,11 @@ label {
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
+}
+.legal-text a{
+  text-decoration: none;
+  color:#0003aa;
+
 }
 /* ------------------ Responsivo Encabezado ------------------ */
 @media (max-width: 768px) {

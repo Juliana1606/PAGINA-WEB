@@ -346,6 +346,37 @@ body {
       font-size: 20px;
     }
   }
+  #cart-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 60%;
+  padding: 0px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  cursor: pointer;
+}
+
+#cart-popup img {
+  width: 100%;
+}
+
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 60%;
+  padding: 4px 8px;
+}
 /* ------------------ Sección Contacto ------------------ */
 .contacto {
     padding: 40px 20px;
